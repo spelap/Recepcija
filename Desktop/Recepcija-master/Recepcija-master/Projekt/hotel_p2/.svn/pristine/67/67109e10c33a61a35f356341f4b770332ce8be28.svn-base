@@ -1,0 +1,157 @@
+/**
+ * ProdajalnaOblacil.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
+
+package si.hotelskapralnica.ws.ProdajalnaOblacil;
+
+public class ProdajalnaOblacil  implements java.io.Serializable {
+    private java.lang.String ime;
+
+    private java.lang.String lokacija;
+
+    public ProdajalnaOblacil() {
+    }
+
+    public ProdajalnaOblacil(
+           java.lang.String ime,
+           java.lang.String lokacija) {
+           this.ime = ime;
+           this.lokacija = lokacija;
+    }
+
+
+    /**
+     * Gets the ime value for this ProdajalnaOblacil.
+     * 
+     * @return ime
+     */
+    public java.lang.String getIme() {
+        return ime;
+    }
+
+
+    /**
+     * Sets the ime value for this ProdajalnaOblacil.
+     * 
+     * @param ime
+     */
+    public void setIme(java.lang.String ime) {
+        this.ime = ime;
+    }
+
+
+    /**
+     * Gets the lokacija value for this ProdajalnaOblacil.
+     * 
+     * @return lokacija
+     */
+    public java.lang.String getLokacija() {
+        return lokacija;
+    }
+
+
+    /**
+     * Sets the lokacija value for this ProdajalnaOblacil.
+     * 
+     * @param lokacija
+     */
+    public void setLokacija(java.lang.String lokacija) {
+        this.lokacija = lokacija;
+    }
+
+    private java.lang.Object __equalsCalc = null;
+    public synchronized boolean equals(java.lang.Object obj) {
+        if (!(obj instanceof ProdajalnaOblacil)) return false;
+        ProdajalnaOblacil other = (ProdajalnaOblacil) obj;
+        if (obj == null) return false;
+        if (this == obj) return true;
+        if (__equalsCalc != null) {
+            return (__equalsCalc == obj);
+        }
+        __equalsCalc = obj;
+        boolean _equals;
+        _equals = true && 
+            ((this.ime==null && other.getIme()==null) || 
+             (this.ime!=null &&
+              this.ime.equals(other.getIme()))) &&
+            ((this.lokacija==null && other.getLokacija()==null) || 
+             (this.lokacija!=null &&
+              this.lokacija.equals(other.getLokacija())));
+        __equalsCalc = null;
+        return _equals;
+    }
+
+    private boolean __hashCodeCalc = false;
+    public synchronized int hashCode() {
+        if (__hashCodeCalc) {
+            return 0;
+        }
+        __hashCodeCalc = true;
+        int _hashCode = 1;
+        if (getIme() != null) {
+            _hashCode += getIme().hashCode();
+        }
+        if (getLokacija() != null) {
+            _hashCode += getLokacija().hashCode();
+        }
+        __hashCodeCalc = false;
+        return _hashCode;
+    }
+
+    // Type metadata
+    private static org.apache.axis.description.TypeDesc typeDesc =
+        new org.apache.axis.description.TypeDesc(ProdajalnaOblacil.class, true);
+
+    static {
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://ws.hotelskapralnica.si/ProdajalnaOblacil", "ProdajalnaOblacil"));
+        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("ime");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "ime"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("lokacija");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "lokacija"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+    }
+
+    /**
+     * Return type metadata object
+     */
+    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+        return typeDesc;
+    }
+
+    /**
+     * Get Custom Serializer
+     */
+    public static org.apache.axis.encoding.Serializer getSerializer(
+           java.lang.String mechType, 
+           java.lang.Class _javaType,  
+           javax.xml.namespace.QName _xmlType) {
+        return 
+          new  org.apache.axis.encoding.ser.BeanSerializer(
+            _javaType, _xmlType, typeDesc);
+    }
+
+    /**
+     * Get Custom Deserializer
+     */
+    public static org.apache.axis.encoding.Deserializer getDeserializer(
+           java.lang.String mechType, 
+           java.lang.Class _javaType,  
+           javax.xml.namespace.QName _xmlType) {
+        return 
+          new  org.apache.axis.encoding.ser.BeanDeserializer(
+            _javaType, _xmlType, typeDesc);
+    }
+
+}

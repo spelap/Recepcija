@@ -1,0 +1,23 @@
+/**
+ * IRezervacijaSob.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
+
+package org.tempuriRezervacija;
+
+public interface IRezervacijaSob extends java.rmi.Remote {
+    public org.datacontract.schemas._2004._07.Hotel_P1_RezervacijaSob.Rezervacija[] vrniRezervacije() throws java.rmi.RemoteException, org.datacontract.schemas._2004._07.SystemR.Exception;
+    public org.datacontract.schemas._2004._07.Hotel_P1_RezervacijaSob.Rezervacija vrniRezervacijo(java.lang.String stRezervacije) throws java.rmi.RemoteException, org.datacontract.schemas._2004._07.SystemR.Exception;
+    public org.datacontract.schemas._2004._07.Hotel_P1_RezervacijaSob.Rezervacija rezervirajSobo(java.lang.String terminOd, java.lang.String terminDo, java.lang.Integer tipSobe, java.lang.String stopnjaUdobja, java.lang.Boolean zajtrk, java.lang.Boolean kosilo, java.lang.Boolean vecerja, java.lang.Boolean wellness, org.datacontract.schemas._2004._07.Hotel_P1_RezervacijaSob.Oseba nosilec, java.lang.Integer steviloOtrok, java.lang.Integer steviloOdraslih, java.lang.String stevilkaKupina, java.lang.String opomba) throws java.rmi.RemoteException, org.datacontract.schemas._2004._07.SystemR.Exception;
+    public java.lang.String prekliciRezervacijo(java.lang.String stRezervacije) throws java.rmi.RemoteException, org.datacontract.schemas._2004._07.SystemR.Exception;
+    public org.datacontract.schemas._2004._07.Hotel_P1_RezervacijaSob.Rezervacija spremeniRezervacijo(java.lang.String stRezervacije, java.lang.String terminOd, java.lang.String terminDo, java.lang.Integer tipSobe, java.lang.String stopnjaUdobja, java.lang.Boolean zajtrk, java.lang.Boolean kosilo, java.lang.Boolean vecerja, java.lang.Boolean wellness, org.datacontract.schemas._2004._07.Hotel_P1_RezervacijaSob.Oseba nosilec, java.lang.Integer steviloOtrok, java.lang.Integer steviloOdraslih, java.lang.String stevilkaKupona, java.lang.String opomba) throws java.rmi.RemoteException, org.datacontract.schemas._2004._07.SystemR.Exception;
+    public org.datacontract.schemas._2004._07.Hotel_P1_RezervacijaSob.Oseba[] vrniOsebe() throws java.rmi.RemoteException, org.datacontract.schemas._2004._07.SystemR.Exception;
+    public org.datacontract.schemas._2004._07.Hotel_P1_RezervacijaSob.Oseba vrniOsebo(java.lang.String id) throws java.rmi.RemoteException, org.datacontract.schemas._2004._07.SystemR.Exception;
+    public org.datacontract.schemas._2004._07.Hotel_P1_RezervacijaSob.Oseba ustvariOsebo(java.lang.String ime, java.lang.String priimek, java.lang.String emso, java.lang.String datumRojstva, java.lang.String opomba) throws java.rmi.RemoteException, org.datacontract.schemas._2004._07.SystemR.Exception;
+    public java.lang.String izbrisiOsebo(java.lang.String id) throws java.rmi.RemoteException, org.datacontract.schemas._2004._07.SystemR.Exception;
+    public org.datacontract.schemas._2004._07.Hotel_P1_RezervacijaSob.Oseba spremeniOsebo(java.lang.String id, java.lang.String ime, java.lang.String priimek, java.lang.String emso, java.lang.String datumRojstva, java.lang.String opomba) throws java.rmi.RemoteException, org.datacontract.schemas._2004._07.SystemR.Exception;
+    public java.lang.String vrniIdNosilca(java.lang.String stRezervacije) throws java.rmi.RemoteException;
+    public java.lang.Integer vrniStProstihSob(java.lang.String terminOd, java.lang.String terminDo, java.lang.Integer tipSobe) throws java.rmi.RemoteException, org.datacontract.schemas._2004._07.SystemR.Exception;
+}

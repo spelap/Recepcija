@@ -1,0 +1,345 @@
+
+package org.tempuriRezervacija;
+
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlElementDecl;
+import javax.xml.bind.annotation.XmlRegistry;
+import javax.xml.namespace.QName;
+import org.datacontract.schemas._2004._07.hotel_p1_rezervacijasob.ArrayOfRezervacija;
+import org.datacontract.schemas._2004._07.hotel_p1_rezervacijasob.Oseba;
+import org.datacontract.schemas._2004._07.hotel_p1_rezervacijasob.Rezervacija;
+
+
+/**
+ * This object contains factory methods for each 
+ * Java content interface and Java element interface 
+ * generated in the org.tempuri package. 
+ * <p>An ObjectFactory allows you to programatically 
+ * construct new instances of the Java representation 
+ * for XML content. The Java representation of XML 
+ * content can consist of schema derived interfaces 
+ * and classes representing the binding of schema 
+ * type definitions, element declarations and model 
+ * groups.  Factory methods for each of these are 
+ * provided in this class.
+ * 
+ */
+@XmlRegistry
+public class ObjectFactory {
+
+    private final static QName _VrniRezervacijeResponseVrniRezervacijeResult_QNAME = new QName("http://tempuri.org/", "vrniRezervacijeResult");
+    private final static QName _RezervirajSoboResponseRezervirajSoboResult_QNAME = new QName("http://tempuri.org/", "rezervirajSoboResult");
+    private final static QName _VrniStProstihSobTerminOd_QNAME = new QName("http://tempuri.org/", "terminOd");
+    private final static QName _VrniStProstihSobTerminDo_QNAME = new QName("http://tempuri.org/", "terminDo");
+    private final static QName _VrniRezervacijoStRezervacije_QNAME = new QName("http://tempuri.org/", "stRezervacije");
+    private final static QName _VrniRezervacijoResponseVrniRezervacijoResult_QNAME = new QName("http://tempuri.org/", "vrniRezervacijoResult");
+    private final static QName _SpremeniRezervacijoResponseSpremeniRezervacijoResult_QNAME = new QName("http://tempuri.org/", "spremeniRezervacijoResult");
+    private final static QName _PrekliciRezervacijoResponsePrekliciRezervacijoResult_QNAME = new QName("http://tempuri.org/", "prekliciRezervacijoResult");
+    private final static QName _SpremeniRezervacijoOpomba_QNAME = new QName("http://tempuri.org/", "opomba");
+    private final static QName _SpremeniRezervacijoStopnjaUdobja_QNAME = new QName("http://tempuri.org/", "stopnjaUdobja");
+    private final static QName _SpremeniRezervacijoNosilec_QNAME = new QName("http://tempuri.org/", "nosilec");
+    private final static QName _SpremeniRezervacijoStevilkaKupona_QNAME = new QName("http://tempuri.org/", "stevilkaKupona");
+    private final static QName _RezervirajSoboStevilkaKupina_QNAME = new QName("http://tempuri.org/", "stevilkaKupina");
+
+    /**
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.tempuri
+     * 
+     */
+    public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link RezervirajSobo }
+     * 
+     */
+    public RezervirajSobo createRezervirajSobo() {
+        return new RezervirajSobo();
+    }
+
+    /**
+     * Create an instance of {@link SpremeniRezervacijoResponse }
+     * 
+     */
+    public SpremeniRezervacijoResponse createSpremeniRezervacijoResponse() {
+        return new SpremeniRezervacijoResponse();
+    }
+
+    /**
+     * Create an instance of {@link VrniStProstihSobResponse }
+     * 
+     */
+    public VrniStProstihSobResponse createVrniStProstihSobResponse() {
+        return new VrniStProstihSobResponse();
+    }
+
+    /**
+     * Create an instance of {@link VrniRezervacijo }
+     * 
+     */
+    public VrniRezervacijo createVrniRezervacijo() {
+        return new VrniRezervacijo();
+    }
+
+    /**
+     * Create an instance of {@link VrniRezervacijoResponse }
+     * 
+     */
+    public VrniRezervacijoResponse createVrniRezervacijoResponse() {
+        return new VrniRezervacijoResponse();
+    }
+
+    /**
+     * Create an instance of {@link VrniStProstihSob }
+     * 
+     */
+    public VrniStProstihSob createVrniStProstihSob() {
+        return new VrniStProstihSob();
+    }
+
+    /**
+     * Create an instance of {@link PrekliciRezervacijo }
+     * 
+     */
+    public PrekliciRezervacijo createPrekliciRezervacijo() {
+        return new PrekliciRezervacijo();
+    }
+
+    /**
+     * Create an instance of {@link VrniRezervacijeResponse }
+     * 
+     */
+    public VrniRezervacijeResponse createVrniRezervacijeResponse() {
+        return new VrniRezervacijeResponse();
+    }
+
+    /**
+     * Create an instance of {@link RezervirajSoboResponse }
+     * 
+     */
+    public RezervirajSoboResponse createRezervirajSoboResponse() {
+        return new RezervirajSoboResponse();
+    }
+
+    /**
+     * Create an instance of {@link SpremeniRezervacijo }
+     * 
+     */
+    public SpremeniRezervacijo createSpremeniRezervacijo() {
+        return new SpremeniRezervacijo();
+    }
+
+    /**
+     * Create an instance of {@link VrniRezervacije }
+     * 
+     */
+    public VrniRezervacije createVrniRezervacije() {
+        return new VrniRezervacije();
+    }
+
+    /**
+     * Create an instance of {@link PrekliciRezervacijoResponse }
+     * 
+     */
+    public PrekliciRezervacijoResponse createPrekliciRezervacijoResponse() {
+        return new PrekliciRezervacijoResponse();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfRezervacija }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "vrniRezervacijeResult", scope = VrniRezervacijeResponse.class)
+    public JAXBElement<ArrayOfRezervacija> createVrniRezervacijeResponseVrniRezervacijeResult(ArrayOfRezervacija value) {
+        return new JAXBElement<ArrayOfRezervacija>(_VrniRezervacijeResponseVrniRezervacijeResult_QNAME, ArrayOfRezervacija.class, VrniRezervacijeResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Rezervacija }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "rezervirajSoboResult", scope = RezervirajSoboResponse.class)
+    public JAXBElement<Rezervacija> createRezervirajSoboResponseRezervirajSoboResult(Rezervacija value) {
+        return new JAXBElement<Rezervacija>(_RezervirajSoboResponseRezervirajSoboResult_QNAME, Rezervacija.class, RezervirajSoboResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "terminOd", scope = VrniStProstihSob.class)
+    public JAXBElement<String> createVrniStProstihSobTerminOd(String value) {
+        return new JAXBElement<String>(_VrniStProstihSobTerminOd_QNAME, String.class, VrniStProstihSob.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "terminDo", scope = VrniStProstihSob.class)
+    public JAXBElement<String> createVrniStProstihSobTerminDo(String value) {
+        return new JAXBElement<String>(_VrniStProstihSobTerminDo_QNAME, String.class, VrniStProstihSob.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "stRezervacije", scope = VrniRezervacijo.class)
+    public JAXBElement<String> createVrniRezervacijoStRezervacije(String value) {
+        return new JAXBElement<String>(_VrniRezervacijoStRezervacije_QNAME, String.class, VrniRezervacijo.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Rezervacija }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "vrniRezervacijoResult", scope = VrniRezervacijoResponse.class)
+    public JAXBElement<Rezervacija> createVrniRezervacijoResponseVrniRezervacijoResult(Rezervacija value) {
+        return new JAXBElement<Rezervacija>(_VrniRezervacijoResponseVrniRezervacijoResult_QNAME, Rezervacija.class, VrniRezervacijoResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Rezervacija }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "spremeniRezervacijoResult", scope = SpremeniRezervacijoResponse.class)
+    public JAXBElement<Rezervacija> createSpremeniRezervacijoResponseSpremeniRezervacijoResult(Rezervacija value) {
+        return new JAXBElement<Rezervacija>(_SpremeniRezervacijoResponseSpremeniRezervacijoResult_QNAME, Rezervacija.class, SpremeniRezervacijoResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "prekliciRezervacijoResult", scope = PrekliciRezervacijoResponse.class)
+    public JAXBElement<String> createPrekliciRezervacijoResponsePrekliciRezervacijoResult(String value) {
+        return new JAXBElement<String>(_PrekliciRezervacijoResponsePrekliciRezervacijoResult_QNAME, String.class, PrekliciRezervacijoResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "terminOd", scope = SpremeniRezervacijo.class)
+    public JAXBElement<String> createSpremeniRezervacijoTerminOd(String value) {
+        return new JAXBElement<String>(_VrniStProstihSobTerminOd_QNAME, String.class, SpremeniRezervacijo.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "opomba", scope = SpremeniRezervacijo.class)
+    public JAXBElement<String> createSpremeniRezervacijoOpomba(String value) {
+        return new JAXBElement<String>(_SpremeniRezervacijoOpomba_QNAME, String.class, SpremeniRezervacijo.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "terminDo", scope = SpremeniRezervacijo.class)
+    public JAXBElement<String> createSpremeniRezervacijoTerminDo(String value) {
+        return new JAXBElement<String>(_VrniStProstihSobTerminDo_QNAME, String.class, SpremeniRezervacijo.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "stopnjaUdobja", scope = SpremeniRezervacijo.class)
+    public JAXBElement<String> createSpremeniRezervacijoStopnjaUdobja(String value) {
+        return new JAXBElement<String>(_SpremeniRezervacijoStopnjaUdobja_QNAME, String.class, SpremeniRezervacijo.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "stRezervacije", scope = SpremeniRezervacijo.class)
+    public JAXBElement<String> createSpremeniRezervacijoStRezervacije(String value) {
+        return new JAXBElement<String>(_VrniRezervacijoStRezervacije_QNAME, String.class, SpremeniRezervacijo.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Oseba }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "nosilec", scope = SpremeniRezervacijo.class)
+    public JAXBElement<Oseba> createSpremeniRezervacijoNosilec(Oseba value) {
+        return new JAXBElement<Oseba>(_SpremeniRezervacijoNosilec_QNAME, Oseba.class, SpremeniRezervacijo.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "stevilkaKupona", scope = SpremeniRezervacijo.class)
+    public JAXBElement<String> createSpremeniRezervacijoStevilkaKupona(String value) {
+        return new JAXBElement<String>(_SpremeniRezervacijoStevilkaKupona_QNAME, String.class, SpremeniRezervacijo.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "stRezervacije", scope = PrekliciRezervacijo.class)
+    public JAXBElement<String> createPrekliciRezervacijoStRezervacije(String value) {
+        return new JAXBElement<String>(_VrniRezervacijoStRezervacije_QNAME, String.class, PrekliciRezervacijo.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "terminOd", scope = RezervirajSobo.class)
+    public JAXBElement<String> createRezervirajSoboTerminOd(String value) {
+        return new JAXBElement<String>(_VrniStProstihSobTerminOd_QNAME, String.class, RezervirajSobo.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "opomba", scope = RezervirajSobo.class)
+    public JAXBElement<String> createRezervirajSoboOpomba(String value) {
+        return new JAXBElement<String>(_SpremeniRezervacijoOpomba_QNAME, String.class, RezervirajSobo.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "terminDo", scope = RezervirajSobo.class)
+    public JAXBElement<String> createRezervirajSoboTerminDo(String value) {
+        return new JAXBElement<String>(_VrniStProstihSobTerminDo_QNAME, String.class, RezervirajSobo.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "stopnjaUdobja", scope = RezervirajSobo.class)
+    public JAXBElement<String> createRezervirajSoboStopnjaUdobja(String value) {
+        return new JAXBElement<String>(_SpremeniRezervacijoStopnjaUdobja_QNAME, String.class, RezervirajSobo.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "stevilkaKupina", scope = RezervirajSobo.class)
+    public JAXBElement<String> createRezervirajSoboStevilkaKupina(String value) {
+        return new JAXBElement<String>(_RezervirajSoboStevilkaKupina_QNAME, String.class, RezervirajSobo.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Oseba }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "nosilec", scope = RezervirajSobo.class)
+    public JAXBElement<Oseba> createRezervirajSoboNosilec(Oseba value) {
+        return new JAXBElement<Oseba>(_SpremeniRezervacijoNosilec_QNAME, Oseba.class, RezervirajSobo.class, value);
+    }
+
+}

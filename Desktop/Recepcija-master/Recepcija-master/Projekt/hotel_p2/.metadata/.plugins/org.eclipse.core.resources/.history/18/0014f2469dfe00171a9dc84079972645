@@ -1,0 +1,11 @@
+package zagonski;
+
+import org.tempuriWellness.Service1Locator;
+
+public class Scenarij1 {
+	static Service1Locator w;
+	static org.tempuriCistilnica.Service1Locator c;
+	public static void main(String [] args){
+		
+	}
+}

@@ -1,0 +1,66 @@
+
+package org.tempuriRecepcija;
+
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+import org.datacontract.schemas._2004._07.hotel_p1_rezervacijasob.ArrayOfRezervacija;
+
+
+/**
+ * <p>Java class for anonymous complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType>
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="vrniRezervacijeResult" type="{http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob}ArrayOfRezervacija" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "", propOrder = {
+    "vrniRezervacijeResult"
+})
+@XmlRootElement(name = "vrniRezervacijeResponse")
+public class VrniRezervacijeResponse {
+
+    @XmlElementRef(name = "vrniRezervacijeResult", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<ArrayOfRezervacija> vrniRezervacijeResult;
+
+    /**
+     * Gets the value of the vrniRezervacijeResult property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link ArrayOfRezervacija }{@code >}
+     *     
+     */
+    public JAXBElement<ArrayOfRezervacija> getVrniRezervacijeResult() {
+        return vrniRezervacijeResult;
+    }
+
+    /**
+     * Sets the value of the vrniRezervacijeResult property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link ArrayOfRezervacija }{@code >}
+     *     
+     */
+    public void setVrniRezervacijeResult(JAXBElement<ArrayOfRezervacija> value) {
+        this.vrniRezervacijeResult = value;
+    }
+
+}

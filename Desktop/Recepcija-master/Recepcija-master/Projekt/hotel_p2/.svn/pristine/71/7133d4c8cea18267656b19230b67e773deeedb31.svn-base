@@ -1,0 +1,413 @@
+
+package si.hotelskapralnica.ws;
+
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlElementDecl;
+import javax.xml.bind.annotation.XmlRegistry;
+import javax.xml.namespace.QName;
+
+
+/**
+ * This object contains factory methods for each 
+ * Java content interface and Java element interface 
+ * generated in the si.hotelskapralnica.ws package. 
+ * <p>An ObjectFactory allows you to programatically 
+ * construct new instances of the Java representation 
+ * for XML content. The Java representation of XML 
+ * content can consist of schema derived interfaces 
+ * and classes representing the binding of schema 
+ * type definitions, element declarations and model 
+ * groups.  Factory methods for each of these are 
+ * provided in this class.
+ * 
+ */
+@XmlRegistry
+public class ObjectFactory {
+
+    private final static QName _ObvestiRecepcijoResponse_QNAME = new QName("http://ws.hotelskapralnica.si/", "obvestiRecepcijoResponse");
+    private final static QName _HotelskaPralnicaFault_QNAME = new QName("http://ws.hotelskapralnica.si/", "HotelskaPralnicaFault");
+    private final static QName _CenaStoritveResponse_QNAME = new QName("http://ws.hotelskapralnica.si/", "cenaStoritveResponse");
+    private final static QName _PridobiVsaPranjaResponse_QNAME = new QName("http://ws.hotelskapralnica.si/", "pridobiVsaPranjaResponse");
+    private final static QName _PrekiniStoritev_QNAME = new QName("http://ws.hotelskapralnica.si/", "prekiniStoritev");
+    private final static QName _PridobiPranjaZaGostaResponse_QNAME = new QName("http://ws.hotelskapralnica.si/", "pridobiPranjaZaGostaResponse");
+    private final static QName _PridobiVsaPranja_QNAME = new QName("http://ws.hotelskapralnica.si/", "pridobiVsaPranja");
+    private final static QName _PridobiPranjaZaGosta_QNAME = new QName("http://ws.hotelskapralnica.si/", "pridobiPranjaZaGosta");
+    private final static QName _PralnicaProsta_QNAME = new QName("http://ws.hotelskapralnica.si/", "pralnicaProsta");
+    private final static QName _NakupOblacilaResponse_QNAME = new QName("http://ws.hotelskapralnica.si/", "nakupOblacilaResponse");
+    private final static QName _NarociCiscenje_QNAME = new QName("http://ws.hotelskapralnica.si/", "narociCiscenje");
+    private final static QName _NarociLikanjeResponse_QNAME = new QName("http://ws.hotelskapralnica.si/", "narociLikanjeResponse");
+    private final static QName _DelovniCasResponse_QNAME = new QName("http://ws.hotelskapralnica.si/", "delovniCasResponse");
+    private final static QName _PrekiniStoritevResponse_QNAME = new QName("http://ws.hotelskapralnica.si/", "prekiniStoritevResponse");
+    private final static QName _DelovniCas_QNAME = new QName("http://ws.hotelskapralnica.si/", "delovniCas");
+    private final static QName _ObvestiRecepcijo_QNAME = new QName("http://ws.hotelskapralnica.si/", "obvestiRecepcijo");
+    private final static QName _NarociLikanje_QNAME = new QName("http://ws.hotelskapralnica.si/", "narociLikanje");
+    private final static QName _NarociCiscenjeResponse_QNAME = new QName("http://ws.hotelskapralnica.si/", "narociCiscenjeResponse");
+    private final static QName _PralnicaProstaResponse_QNAME = new QName("http://ws.hotelskapralnica.si/", "pralnicaProstaResponse");
+    private final static QName _NakupOblacila_QNAME = new QName("http://ws.hotelskapralnica.si/", "nakupOblacila");
+    private final static QName _CenaStoritve_QNAME = new QName("http://ws.hotelskapralnica.si/", "cenaStoritve");
+
+    /**
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: si.hotelskapralnica.ws
+     * 
+     */
+    public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link PridobiPranjaZaGosta }
+     * 
+     */
+    public PridobiPranjaZaGosta createPridobiPranjaZaGosta() {
+        return new PridobiPranjaZaGosta();
+    }
+
+    /**
+     * Create an instance of {@link PralnicaProsta }
+     * 
+     */
+    public PralnicaProsta createPralnicaProsta() {
+        return new PralnicaProsta();
+    }
+
+    /**
+     * Create an instance of {@link NakupOblacilaResponse }
+     * 
+     */
+    public NakupOblacilaResponse createNakupOblacilaResponse() {
+        return new NakupOblacilaResponse();
+    }
+
+    /**
+     * Create an instance of {@link PridobiPranjaZaGostaResponse }
+     * 
+     */
+    public PridobiPranjaZaGostaResponse createPridobiPranjaZaGostaResponse() {
+        return new PridobiPranjaZaGostaResponse();
+    }
+
+    /**
+     * Create an instance of {@link PridobiVsaPranja }
+     * 
+     */
+    public PridobiVsaPranja createPridobiVsaPranja() {
+        return new PridobiVsaPranja();
+    }
+
+    /**
+     * Create an instance of {@link HotelskaPralnicaFaultBean }
+     * 
+     */
+    public HotelskaPralnicaFaultBean createHotelskaPralnicaFaultBean() {
+        return new HotelskaPralnicaFaultBean();
+    }
+
+    /**
+     * Create an instance of {@link CenaStoritveResponse }
+     * 
+     */
+    public CenaStoritveResponse createCenaStoritveResponse() {
+        return new CenaStoritveResponse();
+    }
+
+    /**
+     * Create an instance of {@link PridobiVsaPranjaResponse }
+     * 
+     */
+    public PridobiVsaPranjaResponse createPridobiVsaPranjaResponse() {
+        return new PridobiVsaPranjaResponse();
+    }
+
+    /**
+     * Create an instance of {@link PrekiniStoritev }
+     * 
+     */
+    public PrekiniStoritev createPrekiniStoritev() {
+        return new PrekiniStoritev();
+    }
+
+    /**
+     * Create an instance of {@link ObvestiRecepcijoResponse }
+     * 
+     */
+    public ObvestiRecepcijoResponse createObvestiRecepcijoResponse() {
+        return new ObvestiRecepcijoResponse();
+    }
+
+    /**
+     * Create an instance of {@link NarociCiscenjeResponse }
+     * 
+     */
+    public NarociCiscenjeResponse createNarociCiscenjeResponse() {
+        return new NarociCiscenjeResponse();
+    }
+
+    /**
+     * Create an instance of {@link PralnicaProstaResponse }
+     * 
+     */
+    public PralnicaProstaResponse createPralnicaProstaResponse() {
+        return new PralnicaProstaResponse();
+    }
+
+    /**
+     * Create an instance of {@link NakupOblacila }
+     * 
+     */
+    public NakupOblacila createNakupOblacila() {
+        return new NakupOblacila();
+    }
+
+    /**
+     * Create an instance of {@link CenaStoritve }
+     * 
+     */
+    public CenaStoritve createCenaStoritve() {
+        return new CenaStoritve();
+    }
+
+    /**
+     * Create an instance of {@link PrekiniStoritevResponse }
+     * 
+     */
+    public PrekiniStoritevResponse createPrekiniStoritevResponse() {
+        return new PrekiniStoritevResponse();
+    }
+
+    /**
+     * Create an instance of {@link DelovniCas }
+     * 
+     */
+    public DelovniCas createDelovniCas() {
+        return new DelovniCas();
+    }
+
+    /**
+     * Create an instance of {@link ObvestiRecepcijo }
+     * 
+     */
+    public ObvestiRecepcijo createObvestiRecepcijo() {
+        return new ObvestiRecepcijo();
+    }
+
+    /**
+     * Create an instance of {@link NarociLikanje }
+     * 
+     */
+    public NarociLikanje createNarociLikanje() {
+        return new NarociLikanje();
+    }
+
+    /**
+     * Create an instance of {@link DelovniCasResponse }
+     * 
+     */
+    public DelovniCasResponse createDelovniCasResponse() {
+        return new DelovniCasResponse();
+    }
+
+    /**
+     * Create an instance of {@link NarociCiscenje }
+     * 
+     */
+    public NarociCiscenje createNarociCiscenje() {
+        return new NarociCiscenje();
+    }
+
+    /**
+     * Create an instance of {@link NarociLikanjeResponse }
+     * 
+     */
+    public NarociLikanjeResponse createNarociLikanjeResponse() {
+        return new NarociLikanjeResponse();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ObvestiRecepcijoResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.hotelskapralnica.si/", name = "obvestiRecepcijoResponse")
+    public JAXBElement<ObvestiRecepcijoResponse> createObvestiRecepcijoResponse(ObvestiRecepcijoResponse value) {
+        return new JAXBElement<ObvestiRecepcijoResponse>(_ObvestiRecepcijoResponse_QNAME, ObvestiRecepcijoResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link HotelskaPralnicaFaultBean }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.hotelskapralnica.si/", name = "HotelskaPralnicaFault")
+    public JAXBElement<HotelskaPralnicaFaultBean> createHotelskaPralnicaFault(HotelskaPralnicaFaultBean value) {
+        return new JAXBElement<HotelskaPralnicaFaultBean>(_HotelskaPralnicaFault_QNAME, HotelskaPralnicaFaultBean.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CenaStoritveResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.hotelskapralnica.si/", name = "cenaStoritveResponse")
+    public JAXBElement<CenaStoritveResponse> createCenaStoritveResponse(CenaStoritveResponse value) {
+        return new JAXBElement<CenaStoritveResponse>(_CenaStoritveResponse_QNAME, CenaStoritveResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PridobiVsaPranjaResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.hotelskapralnica.si/", name = "pridobiVsaPranjaResponse")
+    public JAXBElement<PridobiVsaPranjaResponse> createPridobiVsaPranjaResponse(PridobiVsaPranjaResponse value) {
+        return new JAXBElement<PridobiVsaPranjaResponse>(_PridobiVsaPranjaResponse_QNAME, PridobiVsaPranjaResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PrekiniStoritev }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.hotelskapralnica.si/", name = "prekiniStoritev")
+    public JAXBElement<PrekiniStoritev> createPrekiniStoritev(PrekiniStoritev value) {
+        return new JAXBElement<PrekiniStoritev>(_PrekiniStoritev_QNAME, PrekiniStoritev.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PridobiPranjaZaGostaResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.hotelskapralnica.si/", name = "pridobiPranjaZaGostaResponse")
+    public JAXBElement<PridobiPranjaZaGostaResponse> createPridobiPranjaZaGostaResponse(PridobiPranjaZaGostaResponse value) {
+        return new JAXBElement<PridobiPranjaZaGostaResponse>(_PridobiPranjaZaGostaResponse_QNAME, PridobiPranjaZaGostaResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PridobiVsaPranja }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.hotelskapralnica.si/", name = "pridobiVsaPranja")
+    public JAXBElement<PridobiVsaPranja> createPridobiVsaPranja(PridobiVsaPranja value) {
+        return new JAXBElement<PridobiVsaPranja>(_PridobiVsaPranja_QNAME, PridobiVsaPranja.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PridobiPranjaZaGosta }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.hotelskapralnica.si/", name = "pridobiPranjaZaGosta")
+    public JAXBElement<PridobiPranjaZaGosta> createPridobiPranjaZaGosta(PridobiPranjaZaGosta value) {
+        return new JAXBElement<PridobiPranjaZaGosta>(_PridobiPranjaZaGosta_QNAME, PridobiPranjaZaGosta.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PralnicaProsta }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.hotelskapralnica.si/", name = "pralnicaProsta")
+    public JAXBElement<PralnicaProsta> createPralnicaProsta(PralnicaProsta value) {
+        return new JAXBElement<PralnicaProsta>(_PralnicaProsta_QNAME, PralnicaProsta.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link NakupOblacilaResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.hotelskapralnica.si/", name = "nakupOblacilaResponse")
+    public JAXBElement<NakupOblacilaResponse> createNakupOblacilaResponse(NakupOblacilaResponse value) {
+        return new JAXBElement<NakupOblacilaResponse>(_NakupOblacilaResponse_QNAME, NakupOblacilaResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link NarociCiscenje }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.hotelskapralnica.si/", name = "narociCiscenje")
+    public JAXBElement<NarociCiscenje> createNarociCiscenje(NarociCiscenje value) {
+        return new JAXBElement<NarociCiscenje>(_NarociCiscenje_QNAME, NarociCiscenje.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link NarociLikanjeResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.hotelskapralnica.si/", name = "narociLikanjeResponse")
+    public JAXBElement<NarociLikanjeResponse> createNarociLikanjeResponse(NarociLikanjeResponse value) {
+        return new JAXBElement<NarociLikanjeResponse>(_NarociLikanjeResponse_QNAME, NarociLikanjeResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DelovniCasResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.hotelskapralnica.si/", name = "delovniCasResponse")
+    public JAXBElement<DelovniCasResponse> createDelovniCasResponse(DelovniCasResponse value) {
+        return new JAXBElement<DelovniCasResponse>(_DelovniCasResponse_QNAME, DelovniCasResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PrekiniStoritevResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.hotelskapralnica.si/", name = "prekiniStoritevResponse")
+    public JAXBElement<PrekiniStoritevResponse> createPrekiniStoritevResponse(PrekiniStoritevResponse value) {
+        return new JAXBElement<PrekiniStoritevResponse>(_PrekiniStoritevResponse_QNAME, PrekiniStoritevResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DelovniCas }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.hotelskapralnica.si/", name = "delovniCas")
+    public JAXBElement<DelovniCas> createDelovniCas(DelovniCas value) {
+        return new JAXBElement<DelovniCas>(_DelovniCas_QNAME, DelovniCas.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ObvestiRecepcijo }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.hotelskapralnica.si/", name = "obvestiRecepcijo")
+    public JAXBElement<ObvestiRecepcijo> createObvestiRecepcijo(ObvestiRecepcijo value) {
+        return new JAXBElement<ObvestiRecepcijo>(_ObvestiRecepcijo_QNAME, ObvestiRecepcijo.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link NarociLikanje }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.hotelskapralnica.si/", name = "narociLikanje")
+    public JAXBElement<NarociLikanje> createNarociLikanje(NarociLikanje value) {
+        return new JAXBElement<NarociLikanje>(_NarociLikanje_QNAME, NarociLikanje.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link NarociCiscenjeResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.hotelskapralnica.si/", name = "narociCiscenjeResponse")
+    public JAXBElement<NarociCiscenjeResponse> createNarociCiscenjeResponse(NarociCiscenjeResponse value) {
+        return new JAXBElement<NarociCiscenjeResponse>(_NarociCiscenjeResponse_QNAME, NarociCiscenjeResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link PralnicaProstaResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.hotelskapralnica.si/", name = "pralnicaProstaResponse")
+    public JAXBElement<PralnicaProstaResponse> createPralnicaProstaResponse(PralnicaProstaResponse value) {
+        return new JAXBElement<PralnicaProstaResponse>(_PralnicaProstaResponse_QNAME, PralnicaProstaResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link NakupOblacila }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.hotelskapralnica.si/", name = "nakupOblacila")
+    public JAXBElement<NakupOblacila> createNakupOblacila(NakupOblacila value) {
+        return new JAXBElement<NakupOblacila>(_NakupOblacila_QNAME, NakupOblacila.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CenaStoritve }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://ws.hotelskapralnica.si/", name = "cenaStoritve")
+    public JAXBElement<CenaStoritve> createCenaStoritve(CenaStoritve value) {
+        return new JAXBElement<CenaStoritve>(_CenaStoritve_QNAME, CenaStoritve.class, null, value);
+    }
+
+}

@@ -1,0 +1,107 @@
+package zagonski;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
+import org.datacontract.schemas._2004._07.wellness_storitve.Storitev;
+import org.tempuri.IService1;
+import org.tempuri.IService1Proxy;
+
+import service.Gost;
+import service.Oseba;
+import service.RecepcijaService;
+import service.RecepcijaWS;
+import si.hotelskapralnica.ws.HotelskaPralnicaI;
+import si.hotelskapralnica.ws.HotelskaPralnicaIProxy;
+import si.hotelskapralnica.ws.HotelskaPralnicaService;
+import si.hotelskapralnica.ws.HotelskaPralnicaServiceLocator;
+
+public class Zagonski {
+	static HotelskaPralnicaI hp;
+	static IService1 w;
+	public static void main(String [] args){
+		RecepcijaService rs=new RecepcijaService();
+		hp=new HotelskaPralnicaIProxy();
+		w=new IService1Proxy();
+		try {
+			
+			RecepcijaWS r=rs.getRecepcijaPort();
+			Oseba o=new Oseba();
+			o.setIme("Marko");
+			o.setPriimek("Skace");
+			o.setDatumRojstva("15.11.1995");
+			o.setDavcnaSt(15545699);
+			o.setEmso("333333333333");
+			o.setStarost(33);
+			
+			Calendar cal = Calendar.getInstance();
+			cal.set(2017, 12, 17, 19, 19);
+			Calendar cal1 = Calendar.getInstance();
+			cal1.set(2017, 12, 18, 19, 19);
+			
+		
+			ArrayList<Oseba> osebe =new ArrayList<Oseba>();
+			osebe.add(o);
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			System.out.println("Dobrodošli na recepciji Hotela!");
+			System.out.println("Katero storitev želite izbrati?");
+			System.out.println("1-Prijavi se");
+			System.out.println("2-Preveri èe je gost");
+			System.out.println("3-Dodaj na gostov raèun");
+			System.out.println("4-Odjavi gosta");
+			System.out.println("5-Preveri gostov paket");
+			System.out.println("5-Preveri razpolozljivost sobe");
+			System.out.println("6-Sporoci stevilo prostih sob");
+			System.out.println("7-Prikazi vse goste");
+			System.out.println("8-Izpiši vse wellness storitve");
+			System.out.println("9-Rezerviraj wellness storitev");
+			System.out.println("10-Naroci ciscenje v hotelski pralnici");
+			
+			String [] umazana_oblacila = {"hlace"};
+		
+	        String s = br.readLine();
+	        switch (s) {
+            case "1":  System.out.println(r.dodeliSobo(osebe, 0));
+                     break;
+            case "2":  System.out.println(r.aliJeGost("111111111111"));
+                     break;
+            case "3":  System.out.println(r.dodajNaRacun(new BigDecimal(20), "333333333333", "Tenis", "19.12.2017", "222"));
+                     break;
+            case "4":  System.out.println(r.odjaviSobo(1));
+                     break;
+            case "5": System.out.println(r.preveriPaket("111111111111"));
+                     break;
+            case "6":  System.out.println(r.sporociSteviloProstihSob());
+                     break;
+            case "7":  List<Gost> gosti=r.vrniVseGoste();
+						for(int i=0; i<gosti.size(); i++){
+								System.out.println("EMSO gosta: "+gosti.get(i).getEmso());
+						}
+                     break;
+            case "8":  Storitev[] storitve=w.wellness_VrniWellnessStoritve();		//WELLNESS STORITVE
+						for(int i=0; i<storitve.length; i++){
+							System.out.println("Id storitve: "+storitve[i].getID());
+						}
+						break;
+            case "9":  w.wellness_Rezerviraj(1, "111111111111", cal, cal1);
+            			break;
+            case "10":  System.out.println("Konec èišèenja: "+hp.narociCiscenje(umazana_oblacila, 1, cal)); //STORITVE HOTELSKE PRALNICE
+						break;
+            default: List<Gost> gosti1=r.vrniVseGoste();
+					for(int i=0; i<gosti1.size(); i++){
+							System.out.println("EMSO gosta: "+gosti1.get(i).getEmso());
+					}
+                     break;
+        }  
+	
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+		}
+	}
+
+}

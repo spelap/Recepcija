@@ -1,0 +1,122 @@
+
+package org.tempuriCistilnica;
+
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
+
+
+/**
+ * <p>Java class for anonymous complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType>
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="idProstora" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="opis" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="datumCas" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "", propOrder = {
+    "idProstora",
+    "opis",
+    "datumCas"
+})
+@XmlRootElement(name = "NarociCiscenje")
+public class NarociCiscenje {
+
+    protected Integer idProstora;
+    @XmlElementRef(name = "opis", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> opis;
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar datumCas;
+
+    /**
+     * Gets the value of the idProstora property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getIdProstora() {
+        return idProstora;
+    }
+
+    /**
+     * Sets the value of the idProstora property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setIdProstora(Integer value) {
+        this.idProstora = value;
+    }
+
+    /**
+     * Gets the value of the opis property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getOpis() {
+        return opis;
+    }
+
+    /**
+     * Sets the value of the opis property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setOpis(JAXBElement<String> value) {
+        this.opis = value;
+    }
+
+    /**
+     * Gets the value of the datumCas property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getDatumCas() {
+        return datumCas;
+    }
+
+    /**
+     * Sets the value of the datumCas property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setDatumCas(XMLGregorianCalendar value) {
+        this.datumCas = value;
+    }
+
+}

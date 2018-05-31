@@ -1,0 +1,76 @@
+package zagonski;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+import org.tempuriPrevozi.IStoritvePrevozovService;
+import org.tempuriPrevozi.StoritvePrevozovServiceLocator;
+import org.tempuriWellness.Service1Locator;
+
+import data.Oseba;
+import service.Recepcija;
+import si.hotelskapralnica.ws.HotelskaPralnicaServiceLocator;
+import si.hotelskapralnica.ws.HotelskaPralnicaWSW;
+import si.soa.service.AnimacijskiDogodek;
+import si.soa.service.AnimacijskiDogodekServiceLocator;
+
+public class Scenarij1 {
+	static Service1Locator w;
+	static org.tempuriCistilnica.Service1Locator c;
+	
+	public static void main(String [] args){
+		
+		try {
+			Recepcija r=new Recepcija();
+			HotelskaPralnicaServiceLocator hp=new HotelskaPralnicaServiceLocator();
+			HotelskaPralnicaWSW hotelska_pralnica=hp.getHotelskaPralnicaPort();
+			StoritvePrevozovServiceLocator prevozi=new StoritvePrevozovServiceLocator();
+			IStoritvePrevozovService pre= prevozi.getBasicHttpBinding_IStoritvePrevozovService();
+			AnimacijskiDogodekServiceLocator a=new AnimacijskiDogodekServiceLocator();
+			AnimacijskiDogodek ad=a.getAnimacijskiDogodekPort();
+			w=new Service1Locator();
+			org.tempuriWellness.IService1 wellness=w.getBasicHttpBinding_IService1();
+			c=new org.tempuriCistilnica.Service1Locator();
+			org.tempuriCistilnica.IService1 cistilnica=c.getBasicHttpBinding_IService1();
+			
+			Oseba o=new Oseba();
+			o.setIme("Peter");
+			o.setPriimek("Klepec");
+			o.setDatum_rojstva("01.05.1975");
+			o.setDavcna_st(44445678);
+			o.setEmso("100111111111");
+			o.setStarost(42);
+			o.setDan_prihoda("15.02.2018");
+			o.setDan_odhoda("28.02.2018");
+			o.setKosilo(true);
+			o.setVecerja(true);
+			o.setZajtrk(true);
+			o.setWellness(true);
+			o.setKakovost("Tretji");
+			o.setKupon("");
+			ArrayList<Oseba> osebe=new ArrayList<Oseba>();
+			
+			System.out.println("Dobrodošli na recepciji Hotela!");
+			System.out.println("--------------------------------------------------------------------------------------------------------");
+			System.out.println("G: Želel bi se prijaviti");
+			System.out.println("Imate že v naprej ustvarjeno rezervacijo?");
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			String vnos = br.readLine();
+			if(vnos.equals("DA")){
+				System.out.println("Prosim vnesite rezervacijsko številko:");
+				vnos = br.readLine();
+				System.out.println(r.dodeliSobo(osebe, Integer.parseInt(vnos)));
+			}
+			else if(vnos.equals("NE")){
+				System.out.println("Prosili bi vas za vaše osebne podatke:");
+			}
+			else{
+				
+			}
+			
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+		}
+	}
+}

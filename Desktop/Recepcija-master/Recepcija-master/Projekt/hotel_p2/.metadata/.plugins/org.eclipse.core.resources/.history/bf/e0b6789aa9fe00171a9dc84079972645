@@ -1,0 +1,135 @@
+package zagonski;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+import org.datacontract.schemas._2004._07.P8_StoritvePrevozov.NarocenPrevoz;
+import org.datacontract.schemas._2004._07.wellness_storitve.Storitev;
+import org.tempuriPrevozi.IStoritvePrevozovService;
+import org.tempuriPrevozi.StoritvePrevozovServiceLocator;
+import org.tempuriWellness.Service1Locator;
+
+import data.Oseba;
+import service.Recepcija;
+import si.hotelskapralnica.ws.HotelskaPralnicaServiceLocator;
+import si.hotelskapralnica.ws.HotelskaPralnicaWSW;
+import si.hotelskapralnica.ws.HotelskaPralnica.Pranje.Pranje;
+import si.soa.service.AnimacijskiDogodek;
+import si.soa.service.AnimacijskiDogodekServiceLocator;
+import si.soa.service.Dogodek;
+
+public class Scenarij1 {
+	static Service1Locator w;
+	static org.tempuriCistilnica.Service1Locator c;
+	
+	public static void main(String [] args){
+	String emso="";
+		try {
+			Recepcija r=new Recepcija();
+			HotelskaPralnicaServiceLocator hp=new HotelskaPralnicaServiceLocator();
+			HotelskaPralnicaWSW hotelska_pralnica=hp.getHotelskaPralnicaPort();
+			StoritvePrevozovServiceLocator prevozi=new StoritvePrevozovServiceLocator();
+			IStoritvePrevozovService pre= prevozi.getBasicHttpBinding_IStoritvePrevozovService();
+			AnimacijskiDogodekServiceLocator a=new AnimacijskiDogodekServiceLocator();
+			AnimacijskiDogodek ad=a.getAnimacijskiDogodekPort();
+			w=new Service1Locator();
+			org.tempuriWellness.IService1 wellness=w.getBasicHttpBinding_IService1();
+			c=new org.tempuriCistilnica.Service1Locator();
+			org.tempuriCistilnica.IService1 cistilnica=c.getBasicHttpBinding_IService1();
+			
+			Oseba o=new Oseba();
+			o.setIme("Peter");
+			o.setPriimek("Klepec");
+			o.setDatum_rojstva("01.05.1975");
+			o.setDavcna_st(44445678);
+			o.setEmso("100111111111");
+			o.setStarost(42);
+			o.setDan_prihoda("15.02.2018");
+			o.setDan_odhoda("28.02.2018");
+			o.setKosilo(true);
+			o.setVecerja(true);
+			o.setZajtrk(true);
+			o.setWellness(true);
+			o.setKakovost("Tretji");
+			o.setKupon("");
+			ArrayList<Oseba> osebe=new ArrayList<Oseba>();
+			
+			System.out.println("Dobrodošli na recepciji Hotela!");
+			System.out.println("--------------------------------------------------------------------------------------------------------");
+			System.out.println("G: Želel bi se prijaviti");
+			System.out.println("Imate že v naprej ustvarjeno rezervacijo?");
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			String vnos = br.readLine();
+			if(vnos.equals("DA")){
+				System.out.println("Prosim vnesite rezervacijsko številko:");
+				vnos = br.readLine();
+				//System.out.println(r.dodeliSobo(osebe, Integer.parseInt(vnos)));
+			}
+			else if(vnos.equals("NE")){
+				System.out.println("Prosili bi vas za vaše osebne podatke:");
+				System.out.println("G: "+o.getIme()+", "+o.getPriimek()+", "+o.getDatum_rojstva()+", "+o.getDavcna_st()+", "+o.getEmso()+", Razred sobe: "+o.getKakovost()+", Dan odhoda:"+o.getDan_odhoda()+", Zajtrk: "+o.isZajtrk()+", Kosilo: "+o.isKosilo()+", Veèerja: "+o.isVecerja()+", Wellnes: "+o.isWellness()+".");
+				//System.out.println(r.dodeliSobo(osebe, 0));
+			}
+			else{
+				System.out.println("Brez prijave.");
+			}
+			System.out.println("Bi želeli še kaj drugega?");
+			System.out.println("G: Želel bi si oèistiti hlaèe.");
+			System.out.println("Prosim povejte vaš EMŠO");
+			vnos = br.readLine();
+			emso=vnos;
+			Pranje p=hotelska_pralnica.narociCiscenje(vnos, "1516730400000");
+			Calendar calendar = Calendar.getInstance();
+            calendar.setTimeInMillis(Long.parseLong(p.getKonecPranja()));
+			System.out.println("Vaše hlaèe bodo oèišèene "+calendar.getTime()+". Dvignete jih v pralnici.");
+			System.out.println("Bi želeli še kaj drugega?");
+			System.out.println("G: Želel bi si rezervirati wellness.");
+			System.out.println("Storitve wellnessa:");
+			Storitev[] storitve=wellness.wellness_VrniWellnessStoritve();		//WELLNESS STORITVE - WSDL jim ne deluje
+			for(int i=0; i<storitve.length; i++){
+				System.out.println(storitve[i].getID()+", "+storitve[i].getNazivStoritve()+", "+storitve[i].getCena()+"€");
+			}
+			System.out.println("Katero storitev boste izbrali:");
+			vnos = br.readLine();
+			wellness.wellness_Rezerviraj(Integer.parseInt(vnos), emso, "30/2/2018", "31/2/2018");
+			System.out.println("Rezervacija zabeležena");
+			System.out.println("Bi želeli še kaj drugega?");
+			System.out.println("G: Želel bi se prijaviti na pohod.");
+			System.out.println("Tule je seznam vseh pohodov, ki jih organiziramo:");
+			Dogodek[] dogodki=ad.najdiDogodke("pohod");
+			for(int i=0; i<dogodki.length; i++){
+				System.out.println("ID dogodka: "+dogodki[i].getIdDogodka()+", Naziv: "+dogodki[i].getNaziv()+", Cena (Odrasli): "+dogodki[i].getCenaOdrasli()+"€"+", Cena (Otroci): "+dogodki[i].getCenaOtroci()+", Lokacija: "+dogodki[i].getLokacija());
+			}
+			System.out.println("Izberite na kater dogodek vas prijavimo.");
+			vnos = br.readLine();
+			ad.prijavaNaDogodek(emso, Integer.parseInt(vnos), 1, 0);
+			System.out.println("Prijavljeni ste na dogodek.");
+			System.out.println("Bi želeli še kaj drugega?");
+			System.out.println("G: Naroèil bi še prevoz");
+			System.out.println("Prosem povejte do kam bi naroèili prevoz");
+			vnos = br.readLine();
+			
+			NarocenPrevoz np=new NarocenPrevoz();
+			np.setEMSOgosta(emso);
+			np.setKoncnaLokacija(vnos);
+			np.setSteviloLjudi(1);
+			GregorianCalendar c = new GregorianCalendar();
+			np.setDatumOd(c);
+			np.setDatumDo(c);
+			np.setZacetnaLokacija("Hotel");
+			System.out.println("Številka vašega naroèenega prevoza je "+pre.narociPrevoz(np, "Kombi"));
+			System.out.println("Bi želeli še kaj drugega?");
+			System.out.println("G: Ne");
+			System.out.println("----------------Èez nekaj dni---------------");
+			System.out.println("G: Želel bi se odjaviti.");
+			System.out.println("Prosim vnesite številko vaše sobe");
+			vnos = br.readLine();
+			System.out.println(r.odjaviSobo(Integer.parseInt(vnos)));
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+		}
+	}
+}

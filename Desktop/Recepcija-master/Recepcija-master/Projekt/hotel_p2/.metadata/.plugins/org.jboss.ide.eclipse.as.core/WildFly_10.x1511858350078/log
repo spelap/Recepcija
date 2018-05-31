@@ -1,0 +1,10 @@
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2017-12-06 18:06:41.386
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 4 16973825 2017-12-06 18:07:17.589
+!MESSAGE Server processes have terminated prematurely. Please check your server logs for more details. 
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 16842784 2017-12-06 18:07:17.602
+!MESSAGE Poll Thread Aborted: null

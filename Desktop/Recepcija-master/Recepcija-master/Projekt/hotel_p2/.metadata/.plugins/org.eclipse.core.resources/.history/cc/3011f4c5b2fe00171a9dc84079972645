@@ -1,0 +1,100 @@
+package data;
+
+import java.sql.Date;
+
+public class Gost extends Oseba {
+
+	private Soba soba;
+	
+	private String rezevacijska_st;
+	private String dan_prihoda; 
+	private String dan_odhoda;
+	private String kupon;
+	private Racun racun;
+	private boolean trenutnoGost;
+	private boolean zajtrk;
+	private boolean kosilo;
+	private boolean vecerja;
+	private boolean wellness;
+	
+	public Soba getSt_sobe() {
+		return soba;
+	}
+	public void setSt_sobe(Soba soba) {
+		this.soba = soba;
+	}
+	public String getRezevacijska_st() {
+		return rezevacijska_st;
+	}
+	public void setRezevacijska_st(String rezevacijska_st) {
+		this.rezevacijska_st = rezevacijska_st;
+	}
+	public String getDan_prihoda() {
+		return dan_prihoda;
+	}
+	public void setDan_prihoda(String dan_prihoda) {
+		this.dan_prihoda = dan_prihoda;
+	}
+	public String getDan_odhoda() {
+		return dan_odhoda;
+	}
+	public void setDan_odhoda(String dan_odhoda) {
+		this.dan_odhoda = dan_odhoda;
+	}
+	public Racun getRacun() {
+		return racun;
+	}
+	public void setRacun(Racun racun) {
+		this.racun = racun;
+	}
+	public Soba getSoba() {
+		return soba;
+	}
+	public void setSoba(Soba soba) {
+		this.soba = soba;
+	}
+	public boolean isTrenutnoGost() {
+		return trenutnoGost;
+	}
+	public void setTrenutnoGost(boolean trenutnoGost) {
+		this.trenutnoGost = trenutnoGost;
+	}
+	public boolean isZajtrk() {
+		return zajtrk;
+	}
+	public void setZajtrk(boolean zajtrk) {
+		this.zajtrk = zajtrk;
+	}
+	public boolean isKosilo() {
+		return kosilo;
+	}
+	public void setKosilo(boolean kosilo) {
+		this.kosilo = kosilo;
+	}
+	public boolean isVecerja() {
+		return vecerja;
+	}
+	public void setVecerja(boolean vecerja) {
+		this.vecerja = vecerja;
+	}
+	public boolean isWellness() {
+		return wellness;
+	}
+	public void setWellness(boolean wellness) {
+		this.wellness = wellness;
+	}
+	public String getKupon() {
+		return kupon;
+	}
+	public void setKupon(String kupon) {
+		this.kupon = kupon;
+	}
+	@Override
+	public String toString() {
+		return "Gost [soba=" + soba + ", rezevacijska_st=" + rezevacijska_st + ", dan_prihoda=" + dan_prihoda
+				+ ", dan_odhoda=" + dan_odhoda + ", kupon=" + kupon + ", racun=" + racun + ", trenutnoGost="
+				+ trenutnoGost + ", zajtrk=" + zajtrk + ", kosilo=" + kosilo + ", vecerja=" + vecerja + ", wellness="
+				+ wellness + "]";
+	}
+	
+}

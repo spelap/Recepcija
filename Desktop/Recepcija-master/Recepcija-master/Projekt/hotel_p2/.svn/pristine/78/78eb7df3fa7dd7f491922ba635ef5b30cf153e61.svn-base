@@ -1,0 +1,90 @@
+package si.hotelskapralnica.ws;
+
+public class HotelskaPralnicaIProxy implements si.hotelskapralnica.ws.HotelskaPralnicaI {
+  private String _endpoint = null;
+  private si.hotelskapralnica.ws.HotelskaPralnicaI hotelskaPralnicaI = null;
+  
+  public HotelskaPralnicaIProxy() {
+    _initHotelskaPralnicaIProxy();
+  }
+  
+  public HotelskaPralnicaIProxy(String endpoint) {
+    _endpoint = endpoint;
+    _initHotelskaPralnicaIProxy();
+  }
+  
+  private void _initHotelskaPralnicaIProxy() {
+    try {
+      hotelskaPralnicaI = (new si.hotelskapralnica.ws.HotelskaPralnicaServiceLocator()).getHotelskaPralnicaPort();
+      if (hotelskaPralnicaI != null) {
+        if (_endpoint != null)
+          ((javax.xml.rpc.Stub)hotelskaPralnicaI)._setProperty("javax.xml.rpc.service.endpoint.address", _endpoint);
+        else
+          _endpoint = (String)((javax.xml.rpc.Stub)hotelskaPralnicaI)._getProperty("javax.xml.rpc.service.endpoint.address");
+      }
+      
+    }
+    catch (javax.xml.rpc.ServiceException serviceException) {}
+  }
+  
+  public String getEndpoint() {
+    return _endpoint;
+  }
+  
+  public void setEndpoint(String endpoint) {
+    _endpoint = endpoint;
+    if (hotelskaPralnicaI != null)
+      ((javax.xml.rpc.Stub)hotelskaPralnicaI)._setProperty("javax.xml.rpc.service.endpoint.address", _endpoint);
+    
+  }
+  
+  public si.hotelskapralnica.ws.HotelskaPralnicaI getHotelskaPralnicaI() {
+    if (hotelskaPralnicaI == null)
+      _initHotelskaPralnicaIProxy();
+    return hotelskaPralnicaI;
+  }
+  
+  public java.util.Calendar narociCiscenje(java.lang.String[] arg0, int arg1, java.util.Calendar arg2) throws java.rmi.RemoteException{
+    if (hotelskaPralnicaI == null)
+      _initHotelskaPralnicaIProxy();
+    return hotelskaPralnicaI.narociCiscenje(arg0, arg1, arg2);
+  }
+  
+  public void prekiniStoritev(int arg0) throws java.rmi.RemoteException{
+    if (hotelskaPralnicaI == null)
+      _initHotelskaPralnicaIProxy();
+    hotelskaPralnicaI.prekiniStoritev(arg0);
+  }
+  
+  public si.hotelskapralnica.ws.DelovniCas.DelovniCas[] delovniCas() throws java.rmi.RemoteException{
+    if (hotelskaPralnicaI == null)
+      _initHotelskaPralnicaIProxy();
+    return hotelskaPralnicaI.delovniCas();
+  }
+  
+  public java.util.Calendar narociLikanje(int arg0) throws java.rmi.RemoteException{
+    if (hotelskaPralnicaI == null)
+      _initHotelskaPralnicaIProxy();
+    return hotelskaPralnicaI.narociLikanje(arg0);
+  }
+  
+  public void nakupOblacila(int arg0, si.hotelskapralnica.ws.Oblacilo.Oblacilo arg1, si.hotelskapralnica.ws.ProdajalnaOblacil.ProdajalnaOblacil arg2) throws java.rmi.RemoteException{
+    if (hotelskaPralnicaI == null)
+      _initHotelskaPralnicaIProxy();
+    hotelskaPralnicaI.nakupOblacila(arg0, arg1, arg2);
+  }
+  
+  public java.util.Calendar pralnicaProsta(java.lang.String[] arg0) throws java.rmi.RemoteException{
+    if (hotelskaPralnicaI == null)
+      _initHotelskaPralnicaIProxy();
+    return hotelskaPralnicaI.pralnicaProsta(arg0);
+  }
+  
+  public double cenaStoritve(java.lang.String[] arg0) throws java.rmi.RemoteException{
+    if (hotelskaPralnicaI == null)
+      _initHotelskaPralnicaIProxy();
+    return hotelskaPralnicaI.cenaStoritve(arg0);
+  }
+  
+  
+}

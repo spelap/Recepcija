@@ -1,0 +1,41 @@
+package data;
+
+public class Soba {
+	private int st_sobe;
+	private String stanje_sobe;
+	private int st_postelj;
+	private String rang_kakovosti;
+	private boolean zasedena;
+	public boolean isZasedena() {
+		return zasedena;
+	}
+	public void setZasedena(boolean zasedena) {
+		this.zasedena = zasedena;
+	}
+	public int getSt_sobe() {
+		return st_sobe;
+	}
+	public void setSt_sobe(int st_sobe) {
+		this.st_sobe = st_sobe;
+	}
+	public String getStanje_sobe() {
+		return stanje_sobe;
+	}
+	public void setStanje_sobe(String stanje_sobe) {
+		this.stanje_sobe = stanje_sobe;
+	}
+	public int getSt_postelj() {
+		return st_postelj;
+	}
+	public void setSt_postelj(int st_postelj) {
+		this.st_postelj = st_postelj;
+	}
+	public String getRang_kakovosti() {
+		return rang_kakovosti;
+	}
+	public void setRang_kakovosti(String rang_kakovosti) {
+		this.rang_kakovosti = rang_kakovosti;
+	}
+	
+	
+}

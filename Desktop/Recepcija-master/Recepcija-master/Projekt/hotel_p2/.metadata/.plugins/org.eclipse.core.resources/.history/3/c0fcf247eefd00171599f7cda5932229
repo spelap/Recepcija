@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="RecepcijaP2_Client_v3EAR">
+        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+        <dependent-module archiveName="RecepcijaP2_Client_v3.war" deploy-path="/" handle="module:/resource/RecepcijaP2_Client_v3/RecepcijaP2_Client_v3">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="Test1.war" deploy-path="/" handle="module:/resource/Test1/Test1">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="Recepcija_v5.war" deploy-path="/" handle="module:/resource/Recepcija_v5/Recepcija_v5">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="Recepcija_v6.war" deploy-path="/" handle="module:/resource/Recepcija_v6/Recepcija_v6">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

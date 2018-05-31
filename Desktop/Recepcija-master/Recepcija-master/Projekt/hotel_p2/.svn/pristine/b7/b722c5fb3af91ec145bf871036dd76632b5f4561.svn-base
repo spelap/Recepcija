@@ -1,0 +1,87 @@
+
+package si.hotelskapralnica.ws.hotelskapralnica.prodajalnaoblacil;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java class for ProdajalnaOblacil complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="ProdajalnaOblacil">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="ime" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="lokacija" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "ProdajalnaOblacil", propOrder = {
+    "ime",
+    "lokacija"
+})
+public class ProdajalnaOblacil {
+
+    protected String ime;
+    protected String lokacija;
+
+    /**
+     * Gets the value of the ime property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getIme() {
+        return ime;
+    }
+
+    /**
+     * Sets the value of the ime property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setIme(String value) {
+        this.ime = value;
+    }
+
+    /**
+     * Gets the value of the lokacija property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getLokacija() {
+        return lokacija;
+    }
+
+    /**
+     * Sets the value of the lokacija property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setLokacija(String value) {
+        this.lokacija = value;
+    }
+
+}

@@ -1,0 +1,54 @@
+package zagonski;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+
+import javax.xml.rpc.ServiceException;
+
+import service.Gost;
+import service.Oseba;
+import service.RecepcijaService;
+import service.RecepcijaServiceLocator;
+import service.RecepcijaWS;
+import si.hotelskapralnica.ws.HotelskaPralnicaI;
+import si.hotelskapralnica.ws.HotelskaPralnicaService;
+import si.hotelskapralnica.ws.HotelskaPralnicaServiceLocator;
+
+public class Zagonski {
+	static RecepcijaService rs;
+	static HotelskaPralnicaService hp;
+	public static void main(String [] args){
+		rs=new RecepcijaServiceLocator();
+		hp=new HotelskaPralnicaServiceLocator();
+
+		try {
+			HotelskaPralnicaI h=hp.getHotelskaPralnicaPort();
+			RecepcijaWS r=rs.getRecepcijaPort();
+			Oseba o=new Oseba();
+			o.setIme("Janez");
+			o.setPriimek("Novak");
+			
+			Oseba [] osebe ={o};
+	
+			Calendar od=Calendar.getInstance();
+			Calendar d=Calendar.getInstance();
+			
+			System.out.println(r.aliJeGost(o));		//PREVERI ALI JE GOST
+			System.out.println(r.preveriRazpolozljivostSobe(12, od, d)); //PREVERI ÈE JE SOBA NA RAZPOLAGO
+			System.out.println(r.dodeliSobo(osebe, 2324212)); //DODELI GOSTU SOBO
+			System.out.println(r.sporociSteviloProstihSob()); //ŠTEVILO PROSTIH SOB V HOTELU
+			Gost[] gosti=r.vrniVseGoste(); //VSI GOSTI V HOTELU
+			for(Gost g: gosti){
+				System.out.println(g.getIme());
+				System.out.println(g.getPriimek());
+			}
+			System.out.println(r.odjaviSobo(12));	//ODJAVI GOSTA
+			//h.narociCiscenje("hlaèe", od, d);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

@@ -1,0 +1,280 @@
+/**
+ * Racun.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
+
+package service;
+
+public class Racun  implements java.io.Serializable {
+    private java.lang.String datum_odprtja;
+
+    private java.lang.String datum_poravnave;
+
+    private int st_racuna;
+
+    private service.Storitev[] storitve;
+
+    private java.math.BigDecimal znesek;
+
+    public Racun() {
+    }
+
+    public Racun(
+           java.lang.String datum_odprtja,
+           java.lang.String datum_poravnave,
+           int st_racuna,
+           service.Storitev[] storitve,
+           java.math.BigDecimal znesek) {
+           this.datum_odprtja = datum_odprtja;
+           this.datum_poravnave = datum_poravnave;
+           this.st_racuna = st_racuna;
+           this.storitve = storitve;
+           this.znesek = znesek;
+    }
+
+
+    /**
+     * Gets the datum_odprtja value for this Racun.
+     * 
+     * @return datum_odprtja
+     */
+    public java.lang.String getDatum_odprtja() {
+        return datum_odprtja;
+    }
+
+
+    /**
+     * Sets the datum_odprtja value for this Racun.
+     * 
+     * @param datum_odprtja
+     */
+    public void setDatum_odprtja(java.lang.String datum_odprtja) {
+        this.datum_odprtja = datum_odprtja;
+    }
+
+
+    /**
+     * Gets the datum_poravnave value for this Racun.
+     * 
+     * @return datum_poravnave
+     */
+    public java.lang.String getDatum_poravnave() {
+        return datum_poravnave;
+    }
+
+
+    /**
+     * Sets the datum_poravnave value for this Racun.
+     * 
+     * @param datum_poravnave
+     */
+    public void setDatum_poravnave(java.lang.String datum_poravnave) {
+        this.datum_poravnave = datum_poravnave;
+    }
+
+
+    /**
+     * Gets the st_racuna value for this Racun.
+     * 
+     * @return st_racuna
+     */
+    public int getSt_racuna() {
+        return st_racuna;
+    }
+
+
+    /**
+     * Sets the st_racuna value for this Racun.
+     * 
+     * @param st_racuna
+     */
+    public void setSt_racuna(int st_racuna) {
+        this.st_racuna = st_racuna;
+    }
+
+
+    /**
+     * Gets the storitve value for this Racun.
+     * 
+     * @return storitve
+     */
+    public service.Storitev[] getStoritve() {
+        return storitve;
+    }
+
+
+    /**
+     * Sets the storitve value for this Racun.
+     * 
+     * @param storitve
+     */
+    public void setStoritve(service.Storitev[] storitve) {
+        this.storitve = storitve;
+    }
+
+    public service.Storitev getStoritve(int i) {
+        return this.storitve[i];
+    }
+
+    public void setStoritve(int i, service.Storitev _value) {
+        this.storitve[i] = _value;
+    }
+
+
+    /**
+     * Gets the znesek value for this Racun.
+     * 
+     * @return znesek
+     */
+    public java.math.BigDecimal getZnesek() {
+        return znesek;
+    }
+
+
+    /**
+     * Sets the znesek value for this Racun.
+     * 
+     * @param znesek
+     */
+    public void setZnesek(java.math.BigDecimal znesek) {
+        this.znesek = znesek;
+    }
+
+    private java.lang.Object __equalsCalc = null;
+    public synchronized boolean equals(java.lang.Object obj) {
+        if (!(obj instanceof Racun)) return false;
+        Racun other = (Racun) obj;
+        if (obj == null) return false;
+        if (this == obj) return true;
+        if (__equalsCalc != null) {
+            return (__equalsCalc == obj);
+        }
+        __equalsCalc = obj;
+        boolean _equals;
+        _equals = true && 
+            ((this.datum_odprtja==null && other.getDatum_odprtja()==null) || 
+             (this.datum_odprtja!=null &&
+              this.datum_odprtja.equals(other.getDatum_odprtja()))) &&
+            ((this.datum_poravnave==null && other.getDatum_poravnave()==null) || 
+             (this.datum_poravnave!=null &&
+              this.datum_poravnave.equals(other.getDatum_poravnave()))) &&
+            this.st_racuna == other.getSt_racuna() &&
+            ((this.storitve==null && other.getStoritve()==null) || 
+             (this.storitve!=null &&
+              java.util.Arrays.equals(this.storitve, other.getStoritve()))) &&
+            ((this.znesek==null && other.getZnesek()==null) || 
+             (this.znesek!=null &&
+              this.znesek.equals(other.getZnesek())));
+        __equalsCalc = null;
+        return _equals;
+    }
+
+    private boolean __hashCodeCalc = false;
+    public synchronized int hashCode() {
+        if (__hashCodeCalc) {
+            return 0;
+        }
+        __hashCodeCalc = true;
+        int _hashCode = 1;
+        if (getDatum_odprtja() != null) {
+            _hashCode += getDatum_odprtja().hashCode();
+        }
+        if (getDatum_poravnave() != null) {
+            _hashCode += getDatum_poravnave().hashCode();
+        }
+        _hashCode += getSt_racuna();
+        if (getStoritve() != null) {
+            for (int i=0;
+                 i<java.lang.reflect.Array.getLength(getStoritve());
+                 i++) {
+                java.lang.Object obj = java.lang.reflect.Array.get(getStoritve(), i);
+                if (obj != null &&
+                    !obj.getClass().isArray()) {
+                    _hashCode += obj.hashCode();
+                }
+            }
+        }
+        if (getZnesek() != null) {
+            _hashCode += getZnesek().hashCode();
+        }
+        __hashCodeCalc = false;
+        return _hashCode;
+    }
+
+    // Type metadata
+    private static org.apache.axis.description.TypeDesc typeDesc =
+        new org.apache.axis.description.TypeDesc(Racun.class, true);
+
+    static {
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://service/", "racun"));
+        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("datum_odprtja");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "datum_odprtja"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("datum_poravnave");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "datum_poravnave"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("st_racuna");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "st_racuna"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("storitve");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "storitve"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://service/", "storitev"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(true);
+        elemField.setMaxOccursUnbounded(true);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("znesek");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "znesek"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "decimal"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+    }
+
+    /**
+     * Return type metadata object
+     */
+    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+        return typeDesc;
+    }
+
+    /**
+     * Get Custom Serializer
+     */
+    public static org.apache.axis.encoding.Serializer getSerializer(
+           java.lang.String mechType, 
+           java.lang.Class _javaType,  
+           javax.xml.namespace.QName _xmlType) {
+        return 
+          new  org.apache.axis.encoding.ser.BeanSerializer(
+            _javaType, _xmlType, typeDesc);
+    }
+
+    /**
+     * Get Custom Deserializer
+     */
+    public static org.apache.axis.encoding.Deserializer getDeserializer(
+           java.lang.String mechType, 
+           java.lang.Class _javaType,  
+           javax.xml.namespace.QName _xmlType) {
+        return 
+          new  org.apache.axis.encoding.ser.BeanDeserializer(
+            _javaType, _xmlType, typeDesc);
+    }
+
+}

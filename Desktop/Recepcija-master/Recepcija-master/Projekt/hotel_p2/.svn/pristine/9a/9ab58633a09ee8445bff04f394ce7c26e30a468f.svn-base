@@ -1,0 +1,116 @@
+
+package si.hotelskapralnica.ws;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+import si.hotelskapralnica.ws.hotelskapralnica.oblacilo.Oblacilo;
+import si.hotelskapralnica.ws.hotelskapralnica.prodajalnaoblacil.ProdajalnaOblacil;
+
+
+/**
+ * <p>Java class for nakupOblacila complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="nakupOblacila">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="emso" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="oblacilo" type="{http://HotelskaPralnica.ws.hotelskapralnica.si/Oblacilo}Oblacilo" minOccurs="0"/>
+ *         &lt;element name="prodajalna" type="{http://HotelskaPralnica.ws.hotelskapralnica.si/ProdajalnaOblacil}ProdajalnaOblacil" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "nakupOblacila", propOrder = {
+    "emso",
+    "oblacilo",
+    "prodajalna"
+})
+public class NakupOblacila {
+
+    protected String emso;
+    protected Oblacilo oblacilo;
+    protected ProdajalnaOblacil prodajalna;
+
+    /**
+     * Gets the value of the emso property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getEmso() {
+        return emso;
+    }
+
+    /**
+     * Sets the value of the emso property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setEmso(String value) {
+        this.emso = value;
+    }
+
+    /**
+     * Gets the value of the oblacilo property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Oblacilo }
+     *     
+     */
+    public Oblacilo getOblacilo() {
+        return oblacilo;
+    }
+
+    /**
+     * Sets the value of the oblacilo property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Oblacilo }
+     *     
+     */
+    public void setOblacilo(Oblacilo value) {
+        this.oblacilo = value;
+    }
+
+    /**
+     * Gets the value of the prodajalna property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ProdajalnaOblacil }
+     *     
+     */
+    public ProdajalnaOblacil getProdajalna() {
+        return prodajalna;
+    }
+
+    /**
+     * Sets the value of the prodajalna property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ProdajalnaOblacil }
+     *     
+     */
+    public void setProdajalna(ProdajalnaOblacil value) {
+        this.prodajalna = value;
+    }
+
+}

@@ -1,0 +1,393 @@
+/**
+ * Racun.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
+
+package service;
+
+public class Racun  implements java.io.Serializable {
+    private java.util.Calendar datum_odprtja;
+
+    private java.util.Calendar datum_poravnave;
+
+    private java.util.Calendar[] datumi;
+
+    private java.lang.String st_racuna;
+
+    private java.lang.String[] storitve;
+
+    private java.math.BigDecimal znesek;
+
+    private java.math.BigDecimal[] zneski;
+
+    public Racun() {
+    }
+
+    public Racun(
+           java.util.Calendar datum_odprtja,
+           java.util.Calendar datum_poravnave,
+           java.util.Calendar[] datumi,
+           java.lang.String st_racuna,
+           java.lang.String[] storitve,
+           java.math.BigDecimal znesek,
+           java.math.BigDecimal[] zneski) {
+           this.datum_odprtja = datum_odprtja;
+           this.datum_poravnave = datum_poravnave;
+           this.datumi = datumi;
+           this.st_racuna = st_racuna;
+           this.storitve = storitve;
+           this.znesek = znesek;
+           this.zneski = zneski;
+    }
+
+
+    /**
+     * Gets the datum_odprtja value for this Racun.
+     * 
+     * @return datum_odprtja
+     */
+    public java.util.Calendar getDatum_odprtja() {
+        return datum_odprtja;
+    }
+
+
+    /**
+     * Sets the datum_odprtja value for this Racun.
+     * 
+     * @param datum_odprtja
+     */
+    public void setDatum_odprtja(java.util.Calendar datum_odprtja) {
+        this.datum_odprtja = datum_odprtja;
+    }
+
+
+    /**
+     * Gets the datum_poravnave value for this Racun.
+     * 
+     * @return datum_poravnave
+     */
+    public java.util.Calendar getDatum_poravnave() {
+        return datum_poravnave;
+    }
+
+
+    /**
+     * Sets the datum_poravnave value for this Racun.
+     * 
+     * @param datum_poravnave
+     */
+    public void setDatum_poravnave(java.util.Calendar datum_poravnave) {
+        this.datum_poravnave = datum_poravnave;
+    }
+
+
+    /**
+     * Gets the datumi value for this Racun.
+     * 
+     * @return datumi
+     */
+    public java.util.Calendar[] getDatumi() {
+        return datumi;
+    }
+
+
+    /**
+     * Sets the datumi value for this Racun.
+     * 
+     * @param datumi
+     */
+    public void setDatumi(java.util.Calendar[] datumi) {
+        this.datumi = datumi;
+    }
+
+    public java.util.Calendar getDatumi(int i) {
+        return this.datumi[i];
+    }
+
+    public void setDatumi(int i, java.util.Calendar _value) {
+        this.datumi[i] = _value;
+    }
+
+
+    /**
+     * Gets the st_racuna value for this Racun.
+     * 
+     * @return st_racuna
+     */
+    public java.lang.String getSt_racuna() {
+        return st_racuna;
+    }
+
+
+    /**
+     * Sets the st_racuna value for this Racun.
+     * 
+     * @param st_racuna
+     */
+    public void setSt_racuna(java.lang.String st_racuna) {
+        this.st_racuna = st_racuna;
+    }
+
+
+    /**
+     * Gets the storitve value for this Racun.
+     * 
+     * @return storitve
+     */
+    public java.lang.String[] getStoritve() {
+        return storitve;
+    }
+
+
+    /**
+     * Sets the storitve value for this Racun.
+     * 
+     * @param storitve
+     */
+    public void setStoritve(java.lang.String[] storitve) {
+        this.storitve = storitve;
+    }
+
+    public java.lang.String getStoritve(int i) {
+        return this.storitve[i];
+    }
+
+    public void setStoritve(int i, java.lang.String _value) {
+        this.storitve[i] = _value;
+    }
+
+
+    /**
+     * Gets the znesek value for this Racun.
+     * 
+     * @return znesek
+     */
+    public java.math.BigDecimal getZnesek() {
+        return znesek;
+    }
+
+
+    /**
+     * Sets the znesek value for this Racun.
+     * 
+     * @param znesek
+     */
+    public void setZnesek(java.math.BigDecimal znesek) {
+        this.znesek = znesek;
+    }
+
+
+    /**
+     * Gets the zneski value for this Racun.
+     * 
+     * @return zneski
+     */
+    public java.math.BigDecimal[] getZneski() {
+        return zneski;
+    }
+
+
+    /**
+     * Sets the zneski value for this Racun.
+     * 
+     * @param zneski
+     */
+    public void setZneski(java.math.BigDecimal[] zneski) {
+        this.zneski = zneski;
+    }
+
+    public java.math.BigDecimal getZneski(int i) {
+        return this.zneski[i];
+    }
+
+    public void setZneski(int i, java.math.BigDecimal _value) {
+        this.zneski[i] = _value;
+    }
+
+    private java.lang.Object __equalsCalc = null;
+    public synchronized boolean equals(java.lang.Object obj) {
+        if (!(obj instanceof Racun)) return false;
+        Racun other = (Racun) obj;
+        if (obj == null) return false;
+        if (this == obj) return true;
+        if (__equalsCalc != null) {
+            return (__equalsCalc == obj);
+        }
+        __equalsCalc = obj;
+        boolean _equals;
+        _equals = true && 
+            ((this.datum_odprtja==null && other.getDatum_odprtja()==null) || 
+             (this.datum_odprtja!=null &&
+              this.datum_odprtja.equals(other.getDatum_odprtja()))) &&
+            ((this.datum_poravnave==null && other.getDatum_poravnave()==null) || 
+             (this.datum_poravnave!=null &&
+              this.datum_poravnave.equals(other.getDatum_poravnave()))) &&
+            ((this.datumi==null && other.getDatumi()==null) || 
+             (this.datumi!=null &&
+              java.util.Arrays.equals(this.datumi, other.getDatumi()))) &&
+            ((this.st_racuna==null && other.getSt_racuna()==null) || 
+             (this.st_racuna!=null &&
+              this.st_racuna.equals(other.getSt_racuna()))) &&
+            ((this.storitve==null && other.getStoritve()==null) || 
+             (this.storitve!=null &&
+              java.util.Arrays.equals(this.storitve, other.getStoritve()))) &&
+            ((this.znesek==null && other.getZnesek()==null) || 
+             (this.znesek!=null &&
+              this.znesek.equals(other.getZnesek()))) &&
+            ((this.zneski==null && other.getZneski()==null) || 
+             (this.zneski!=null &&
+              java.util.Arrays.equals(this.zneski, other.getZneski())));
+        __equalsCalc = null;
+        return _equals;
+    }
+
+    private boolean __hashCodeCalc = false;
+    public synchronized int hashCode() {
+        if (__hashCodeCalc) {
+            return 0;
+        }
+        __hashCodeCalc = true;
+        int _hashCode = 1;
+        if (getDatum_odprtja() != null) {
+            _hashCode += getDatum_odprtja().hashCode();
+        }
+        if (getDatum_poravnave() != null) {
+            _hashCode += getDatum_poravnave().hashCode();
+        }
+        if (getDatumi() != null) {
+            for (int i=0;
+                 i<java.lang.reflect.Array.getLength(getDatumi());
+                 i++) {
+                java.lang.Object obj = java.lang.reflect.Array.get(getDatumi(), i);
+                if (obj != null &&
+                    !obj.getClass().isArray()) {
+                    _hashCode += obj.hashCode();
+                }
+            }
+        }
+        if (getSt_racuna() != null) {
+            _hashCode += getSt_racuna().hashCode();
+        }
+        if (getStoritve() != null) {
+            for (int i=0;
+                 i<java.lang.reflect.Array.getLength(getStoritve());
+                 i++) {
+                java.lang.Object obj = java.lang.reflect.Array.get(getStoritve(), i);
+                if (obj != null &&
+                    !obj.getClass().isArray()) {
+                    _hashCode += obj.hashCode();
+                }
+            }
+        }
+        if (getZnesek() != null) {
+            _hashCode += getZnesek().hashCode();
+        }
+        if (getZneski() != null) {
+            for (int i=0;
+                 i<java.lang.reflect.Array.getLength(getZneski());
+                 i++) {
+                java.lang.Object obj = java.lang.reflect.Array.get(getZneski(), i);
+                if (obj != null &&
+                    !obj.getClass().isArray()) {
+                    _hashCode += obj.hashCode();
+                }
+            }
+        }
+        __hashCodeCalc = false;
+        return _hashCode;
+    }
+
+    // Type metadata
+    private static org.apache.axis.description.TypeDesc typeDesc =
+        new org.apache.axis.description.TypeDesc(Racun.class, true);
+
+    static {
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://service/", "racun"));
+        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("datum_odprtja");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "datum_odprtja"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("datum_poravnave");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "datum_poravnave"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("datumi");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "datumi"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(true);
+        elemField.setMaxOccursUnbounded(true);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("st_racuna");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "st_racuna"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("storitve");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "storitve"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(true);
+        elemField.setMaxOccursUnbounded(true);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("znesek");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "znesek"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "decimal"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("zneski");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "zneski"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "decimal"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(true);
+        elemField.setMaxOccursUnbounded(true);
+        typeDesc.addFieldDesc(elemField);
+    }
+
+    /**
+     * Return type metadata object
+     */
+    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+        return typeDesc;
+    }
+
+    /**
+     * Get Custom Serializer
+     */
+    public static org.apache.axis.encoding.Serializer getSerializer(
+           java.lang.String mechType, 
+           java.lang.Class _javaType,  
+           javax.xml.namespace.QName _xmlType) {
+        return 
+          new  org.apache.axis.encoding.ser.BeanSerializer(
+            _javaType, _xmlType, typeDesc);
+    }
+
+    /**
+     * Get Custom Deserializer
+     */
+    public static org.apache.axis.encoding.Deserializer getDeserializer(
+           java.lang.String mechType, 
+           java.lang.Class _javaType,  
+           javax.xml.namespace.QName _xmlType) {
+        return 
+          new  org.apache.axis.encoding.ser.BeanDeserializer(
+            _javaType, _xmlType, typeDesc);
+    }
+
+}

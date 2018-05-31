@@ -1,0 +1,66 @@
+package data;
+
+import java.sql.Date;
+
+public class Oseba {
+
+	private String ime;
+	private String priimek;
+	private int starost;
+	private Date datum_rojstva;
+	private String emso;
+	private int davcna_st;
+
+	public Oseba() {
+		super();
+	}
+
+	public String getIme() {
+		return ime;
+	}
+
+	public void setIme(String ime) {
+		this.ime = ime;
+	}
+
+	public String getPriimek() {
+		return priimek;
+	}
+
+	public void setPriimek(String priimek) {
+		this.priimek = priimek;
+	}
+
+	public int getStarost() {
+		return starost;
+	}
+
+	public void setStarost(int starost) {
+		this.starost = starost;
+	}
+
+	public Date getDatum_rojstva() {
+		return datum_rojstva;
+	}
+
+	public void setDatum_rojstva(Date datum_rojstva) {
+		this.datum_rojstva = datum_rojstva;
+	}
+
+	public String getEmso() {
+		return emso;
+	}
+
+	public void setEmso(String emso) {
+		this.emso = emso;
+	}
+
+	public int getDavcna_st() {
+		return davcna_st;
+	}
+
+	public void setDavcna_st(int davcna_st) {
+		this.davcna_st = davcna_st;
+	}
+
+}

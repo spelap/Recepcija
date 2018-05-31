@@ -1,0 +1,188 @@
+
+package org.datacontract.schemas._2004._07.hotel_p1_rezervacijasob;
+
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlElementDecl;
+import javax.xml.bind.annotation.XmlRegistry;
+import javax.xml.namespace.QName;
+
+
+/**
+ * This object contains factory methods for each 
+ * Java content interface and Java element interface 
+ * generated in the org.datacontract.schemas._2004._07.hotel_p1_rezervacijasob package. 
+ * <p>An ObjectFactory allows you to programatically 
+ * construct new instances of the Java representation 
+ * for XML content. The Java representation of XML 
+ * content can consist of schema derived interfaces 
+ * and classes representing the binding of schema 
+ * type definitions, element declarations and model 
+ * groups.  Factory methods for each of these are 
+ * provided in this class.
+ * 
+ */
+@XmlRegistry
+public class ObjectFactory {
+
+    private final static QName _Rezervacija_QNAME = new QName("http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", "Rezervacija");
+    private final static QName _Oseba_QNAME = new QName("http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", "Oseba");
+    private final static QName _ArrayOfRezervacija_QNAME = new QName("http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", "ArrayOfRezervacija");
+    private final static QName _RezervacijaStopnjaUdobja_QNAME = new QName("http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", "StopnjaUdobja");
+    private final static QName _RezervacijaOpomba_QNAME = new QName("http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", "Opomba");
+    private final static QName _RezervacijaNosilec_QNAME = new QName("http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", "Nosilec");
+    private final static QName _RezervacijaRezervacijskaStevilka_QNAME = new QName("http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", "RezervacijskaStevilka");
+    private final static QName _RezervacijaStevilkaKupona_QNAME = new QName("http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", "StevilkaKupona");
+    private final static QName _OsebaPriimek_QNAME = new QName("http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", "Priimek");
+    private final static QName _OsebaDatumRojstva_QNAME = new QName("http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", "DatumRojstva");
+    private final static QName _OsebaIme_QNAME = new QName("http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", "Ime");
+    private final static QName _OsebaEmso_QNAME = new QName("http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", "Emso");
+
+    /**
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.datacontract.schemas._2004._07.hotel_p1_rezervacijasob
+     * 
+     */
+    public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link Oseba }
+     * 
+     */
+    public Oseba createOseba() {
+        return new Oseba();
+    }
+
+    /**
+     * Create an instance of {@link Rezervacija }
+     * 
+     */
+    public Rezervacija createRezervacija() {
+        return new Rezervacija();
+    }
+
+    /**
+     * Create an instance of {@link ArrayOfRezervacija }
+     * 
+     */
+    public ArrayOfRezervacija createArrayOfRezervacija() {
+        return new ArrayOfRezervacija();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Rezervacija }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", name = "Rezervacija")
+    public JAXBElement<Rezervacija> createRezervacija(Rezervacija value) {
+        return new JAXBElement<Rezervacija>(_Rezervacija_QNAME, Rezervacija.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Oseba }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", name = "Oseba")
+    public JAXBElement<Oseba> createOseba(Oseba value) {
+        return new JAXBElement<Oseba>(_Oseba_QNAME, Oseba.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfRezervacija }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", name = "ArrayOfRezervacija")
+    public JAXBElement<ArrayOfRezervacija> createArrayOfRezervacija(ArrayOfRezervacija value) {
+        return new JAXBElement<ArrayOfRezervacija>(_ArrayOfRezervacija_QNAME, ArrayOfRezervacija.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", name = "StopnjaUdobja", scope = Rezervacija.class)
+    public JAXBElement<String> createRezervacijaStopnjaUdobja(String value) {
+        return new JAXBElement<String>(_RezervacijaStopnjaUdobja_QNAME, String.class, Rezervacija.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", name = "Opomba", scope = Rezervacija.class)
+    public JAXBElement<String> createRezervacijaOpomba(String value) {
+        return new JAXBElement<String>(_RezervacijaOpomba_QNAME, String.class, Rezervacija.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Oseba }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", name = "Nosilec", scope = Rezervacija.class)
+    public JAXBElement<Oseba> createRezervacijaNosilec(Oseba value) {
+        return new JAXBElement<Oseba>(_RezervacijaNosilec_QNAME, Oseba.class, Rezervacija.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", name = "RezervacijskaStevilka", scope = Rezervacija.class)
+    public JAXBElement<String> createRezervacijaRezervacijskaStevilka(String value) {
+        return new JAXBElement<String>(_RezervacijaRezervacijskaStevilka_QNAME, String.class, Rezervacija.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", name = "StevilkaKupona", scope = Rezervacija.class)
+    public JAXBElement<String> createRezervacijaStevilkaKupona(String value) {
+        return new JAXBElement<String>(_RezervacijaStevilkaKupona_QNAME, String.class, Rezervacija.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", name = "Opomba", scope = Oseba.class)
+    public JAXBElement<String> createOsebaOpomba(String value) {
+        return new JAXBElement<String>(_RezervacijaOpomba_QNAME, String.class, Oseba.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", name = "Priimek", scope = Oseba.class)
+    public JAXBElement<String> createOsebaPriimek(String value) {
+        return new JAXBElement<String>(_OsebaPriimek_QNAME, String.class, Oseba.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", name = "DatumRojstva", scope = Oseba.class)
+    public JAXBElement<String> createOsebaDatumRojstva(String value) {
+        return new JAXBElement<String>(_OsebaDatumRojstva_QNAME, String.class, Oseba.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", name = "Ime", scope = Oseba.class)
+    public JAXBElement<String> createOsebaIme(String value) {
+        return new JAXBElement<String>(_OsebaIme_QNAME, String.class, Oseba.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob", name = "Emso", scope = Oseba.class)
+    public JAXBElement<String> createOsebaEmso(String value) {
+        return new JAXBElement<String>(_OsebaEmso_QNAME, String.class, Oseba.class, value);
+    }
+
+}

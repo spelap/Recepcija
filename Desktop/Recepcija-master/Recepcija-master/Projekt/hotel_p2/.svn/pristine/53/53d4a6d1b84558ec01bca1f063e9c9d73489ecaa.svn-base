@@ -1,0 +1,170 @@
+package service;
+import java.util.ArrayList;
+import java.util.Date;
+
+import javax.jws.WebService;
+
+import data.Gost;
+import data.Oseba;
+import data.Racun;
+import data.Soba;
+
+@WebService(endpointInterface="service.IRecepcija")
+public class Recepcija implements IRecepcija {
+	
+	public ArrayList<Soba> sobe=new ArrayList<Soba>();
+	public ArrayList<Gost> gosti=new ArrayList<Gost>();
+
+	
+	/* (non-Javadoc)
+	 * @see IRecepcija#dodajNaRacun(double, Gost, java.lang.String, java.util.Date, java.lang.String)
+	 */
+	@Override
+	public String dodajNaRacun(double znesek, Gost gost, String storitev, Date datum, String sifra){
+		String odgovor;
+		try{
+			Racun racun=gost.getRacun();
+			double novi_znesek=racun.getZnesek()+znesek;
+			racun.setZnesek(novi_znesek);
+			
+			racun.getStoritve().add(storitev);
+			racun.getDatumi().add(datum);
+			racun.getZneski().add(znesek);
+			
+			odgovor="Storitev dodana na raèun.";
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+			odgovor="Prišlo je do napake.";
+		}
+		
+		return odgovor;
+	}
+	
+	/* (non-Javadoc)
+	 * @see IRecepcija#dodeliSobo(java.util.ArrayList, int)
+	 */
+	@Override
+	public String dodeliSobo(ArrayList<Oseba> osebe, int rezervacijska_stevilka){
+		
+		String odgovor;
+		try{
+			
+			for(int i=0; i<osebe.size(); i++){
+				Oseba o=osebe.get(i);
+				Gost g=new Gost();
+				g.setIme(o.getIme());
+				g.setPriimek(o.getPriimek());
+				g.setDatum_rojstva(o.getDatum_rojstva());
+				g.setDavcna_st(o.getDavcna_st());
+				g.setEmso(o.getEmso());
+				g.setStarost(o.getStarost());
+				g.setDan_prihoda(new Date());
+				g.setRacun(new Racun());
+				
+				for(int j=0; j<sobe.size(); j++){
+					if(!sobe.get(j).isZasedena()){
+						g.setSt_sobe(sobe.get(j));
+					}
+				}
+				
+				gosti.add(g);
+
+			}
+	
+			odgovor="Soba dodeljena.";
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+			odgovor="Prišlo je do napake.";
+		}
+		return odgovor;
+	}
+	
+	/* (non-Javadoc)
+	 * @see IRecepcija#odjaviSobo(int)
+	 */
+	@Override
+	public String odjaviSobo(int st_sobe){
+		String odgovor;
+		try{
+
+			for(int j=0; j<sobe.size(); j++){
+				if(sobe.get(j).getSt_sobe()==st_sobe){
+					sobe.get(j).setZasedena(false);
+				}
+			}
+			
+			odgovor="Gost odjavljen.";
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+			odgovor="Prišlo je do napake.";
+		}
+		return odgovor;
+	}
+	
+	/* (non-Javadoc)
+	 * @see IRecepcija#preveriRazpolozljivostSobe(int, java.util.Date, java.util.Date)
+	 */
+	@Override
+	public String preveriRazpolozljivostSobe(int st_sobe, Date od, Date do_dat){
+		String odgovor="";
+		try{
+			for(int j=0; j<sobe.size(); j++){
+				if(sobe.get(j).getSt_sobe()==st_sobe){
+					if(sobe.get(j).isZasedena()){
+					odgovor="Soba je zasedena";
+					}
+					else{
+					odgovor="Soba je prosta";
+					}
+				}
+			}
+
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+			odgovor="Prišlo je do napake.";
+		}
+		return odgovor;
+	}
+	
+	/* (non-Javadoc)
+	 * @see IRecepcija#sporociSteviloProstihSob()
+	 */
+	@Override
+	public int sporociSteviloProstihSob(){
+		int stevec=0;
+		try{
+			
+			for(int j=0; j<sobe.size(); j++){
+				if(!sobe.get(j).isZasedena()){
+					stevec++;
+				}
+			}
+			
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+		}
+		return stevec;
+	}
+	
+	/* (non-Javadoc)
+	 * @see IRecepcija#aliJeGost(Oseba)
+	 */
+	@Override
+	public boolean aliJeGost(Oseba oseba){
+		
+		for(int j=0; j<gosti.size(); j++){
+			if(gosti.get(j).getEmso().equals(oseba.getEmso())){
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	/* (non-Javadoc)
+	 * @see IRecepcija#vrniVseGoste()
+	 */
+	@Override
+	public ArrayList<Gost> vrniVseGoste(){
+		return gosti;
+	}
+}

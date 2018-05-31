@@ -1,0 +1,59 @@
+package data;
+import java.util.ArrayList;
+import java.util.Date;
+
+public class Racun {
+	private String st_racuna;
+	private ArrayList<String> storitve=new ArrayList<String>();
+	private ArrayList<Double> zneski=new ArrayList<Double>();
+	private ArrayList<Date> datumi=new ArrayList<Date>();
+	private Date datum_odprtja;
+	private Date datum_poravnave;
+	private double znesek;
+	
+	public String getSt_racuna() {
+		return st_racuna;
+	}
+	public void setSt_racuna(String st_racuna) {
+		this.st_racuna = st_racuna;
+	}
+	public Date getDatum_odprtja() {
+		return datum_odprtja;
+	}
+	public void setDatum_odprtja(Date datum_odprtja) {
+		this.datum_odprtja = datum_odprtja;
+	}
+	public Date getDatum_poravnave() {
+		return datum_poravnave;
+	}
+	public void setDatum_poravnave(Date datum_poravnave) {
+		this.datum_poravnave = datum_poravnave;
+	}
+	public double getZnesek() {
+		return znesek;
+	}
+	public void setZnesek(double znesek) {
+		this.znesek = znesek;
+	}
+	public ArrayList<String> getStoritve() {
+		return storitve;
+	}
+	public void setStoritve(ArrayList<String> storitve) {
+		this.storitve = storitve;
+	}
+	public ArrayList<Double> getZneski() {
+		return zneski;
+	}
+	public void setZneski(ArrayList<Double> zneski) {
+		this.zneski = zneski;
+	}
+	public ArrayList<Date> getDatumi() {
+		return datumi;
+	}
+	public void setDatumi(ArrayList<Date> datumi) {
+		this.datumi = datumi;
+	}
+	
+	
+	
+}

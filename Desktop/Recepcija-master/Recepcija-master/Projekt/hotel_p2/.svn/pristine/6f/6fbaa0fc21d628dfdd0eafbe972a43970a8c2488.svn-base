@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+encoding//src/service/Gost.java=UTF-8
+encoding//src/service/Oseba.java=UTF-8
+encoding//src/service/Racun.java=UTF-8
+encoding//src/service/RecepcijaService.java=UTF-8
+encoding//src/service/RecepcijaServiceLocator.java=UTF-8
+encoding//src/service/RecepcijaServiceSoapBindingStub.java=UTF-8
+encoding//src/service/RecepcijaWS.java=UTF-8
+encoding//src/service/Soba.java=UTF-8
+encoding//src/si/hotelskapralnica/ws/DelovniCas/DelovniCas.java=UTF-8
+encoding//src/si/hotelskapralnica/ws/HotelskaPralnicaI.java=UTF-8
+encoding//src/si/hotelskapralnica/ws/HotelskaPralnicaService.java=UTF-8
+encoding//src/si/hotelskapralnica/ws/HotelskaPralnicaServiceLocator.java=UTF-8
+encoding//src/si/hotelskapralnica/ws/HotelskaPralnicaServiceSoapBindingStub.java=UTF-8
+encoding//src/si/hotelskapralnica/ws/Oblacilo/Oblacilo.java=UTF-8
+encoding//src/si/hotelskapralnica/ws/ProdajalnaOblacil/ProdajalnaOblacil.java=UTF-8

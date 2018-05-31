@@ -1,0 +1,59 @@
+package zagonski;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+
+import org.datacontract.schemas._2004._07.wellness_storitve.Storitev;
+import org.tempuri.IService1;
+import org.tempuri.IService1Proxy;
+import org.tempuri.Service1;
+import org.tempuri.Service1Locator;
+
+import service.Gost;
+import service.Oseba;
+import service.RecepcijaService;
+import service.RecepcijaWS;
+
+public class Zagonski {
+
+	static IService1 w;
+	public static void main(String [] args){
+		RecepcijaService rs=new RecepcijaService();
+		w=new IService1Proxy();
+		try {
+			//Storitev[] s=w.wellness_VrniWellnessStoritve();
+			//System.out.println(s.length);
+			RecepcijaWS r=rs.getRecepcijaPort();
+			Oseba o=new Oseba();
+			o.setIme("Marko");
+			o.setPriimek("Skace");
+			o.setDatumRojstva("15.11.1995");
+			o.setDavcnaSt(15545699);
+			o.setEmso("333333333333");
+			o.setStarost(33);
+			
+		
+			ArrayList<Oseba> osebe =new ArrayList<Oseba>();
+			osebe.add(o);
+			
+			//System.out.println(r.dodeliSobo(osebe, 0));
+			//System.out.println(r.aliJeGost("111111111111"));
+			
+			//System.out.println(r.dodajNaRacun(new BigDecimal(20), "333333333333", "Tenis", "19.12.2017", "222"));
+			//System.out.println(r.odjaviSobo(1));
+			//System.out.println(r.preveriPaket("111111111111"));
+		
+			//System.out.println(r.preveriRazpolozljivostSobe(2));
+			//System.out.println(r.sporociSteviloProstihSob());
+			List<Gost> gosti=r.vrniVseGoste();
+			for(int i=0; i<gosti.size(); i++){
+				System.out.println("EMSO gosta: "+gosti.get(i).getEmso());
+			}
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+		}
+	}
+
+}

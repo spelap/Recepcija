@@ -1,0 +1,87 @@
+
+package si.hotelskapralnica.ws;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java class for narociCiscenje complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="narociCiscenje">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="emso" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="casPrevzema" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "narociCiscenje", propOrder = {
+    "emso",
+    "casPrevzema"
+})
+public class NarociCiscenje {
+
+    protected String emso;
+    protected String casPrevzema;
+
+    /**
+     * Gets the value of the emso property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getEmso() {
+        return emso;
+    }
+
+    /**
+     * Sets the value of the emso property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setEmso(String value) {
+        this.emso = value;
+    }
+
+    /**
+     * Gets the value of the casPrevzema property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCasPrevzema() {
+        return casPrevzema;
+    }
+
+    /**
+     * Sets the value of the casPrevzema property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCasPrevzema(String value) {
+        this.casPrevzema = value;
+    }
+
+}

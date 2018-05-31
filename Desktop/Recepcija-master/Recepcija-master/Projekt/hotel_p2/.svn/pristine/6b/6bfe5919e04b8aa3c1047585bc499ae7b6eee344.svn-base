@@ -1,0 +1,114 @@
+
+package si.hotelskapralnica.ws.hotelskapralnica.delovnicas;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java class for DelovniCas complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="DelovniCas">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="danVTednu" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="konec" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="zacetek" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "DelovniCas", propOrder = {
+    "danVTednu",
+    "konec",
+    "zacetek"
+})
+public class DelovniCas {
+
+    protected String danVTednu;
+    protected String konec;
+    protected String zacetek;
+
+    /**
+     * Gets the value of the danVTednu property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDanVTednu() {
+        return danVTednu;
+    }
+
+    /**
+     * Sets the value of the danVTednu property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDanVTednu(String value) {
+        this.danVTednu = value;
+    }
+
+    /**
+     * Gets the value of the konec property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getKonec() {
+        return konec;
+    }
+
+    /**
+     * Sets the value of the konec property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setKonec(String value) {
+        this.konec = value;
+    }
+
+    /**
+     * Gets the value of the zacetek property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getZacetek() {
+        return zacetek;
+    }
+
+    /**
+     * Sets the value of the zacetek property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setZacetek(String value) {
+        this.zacetek = value;
+    }
+
+}

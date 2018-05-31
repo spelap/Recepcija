@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.jst.ws.client.type.java">
+		<item value="http://soa.informatika.uni-mb.si:8080/AnimacijskiDogodki_v4/AnimacijskiDogodek?wsdl"/>
+		<item value="http://soa.informatika.uni-mb.si/P5_WellnessStoritve/Service1.svc?wsdl"/>
+		<item value="http://soa.informatika.uni-mb.si:8080/Animacijski_dogodki_v3/AnimacijskiDogodek?wsdl"/>
+		<item value="http://soa.informatika.uni-mb.si/P8_StoritvePrevozov/v1_SOAP/StoritvePrevozovService.svc?wsdl"/>
+		<item value="http://soa.informatika.uni-mb.si/P9_CistilniServis/v1soap/Service1.svc?singleWsdl"/>
+		<item value="http://soa.informatika.uni-mb.si:8080/HotelskaPralnica_v4/HotelskaPralnica?wsdl"/>
+	</list>
+</section>

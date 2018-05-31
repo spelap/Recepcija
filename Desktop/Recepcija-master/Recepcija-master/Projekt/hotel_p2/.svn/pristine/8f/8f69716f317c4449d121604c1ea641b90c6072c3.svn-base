@@ -1,0 +1,423 @@
+
+package org.tempuriRecepcija;
+
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElementRef;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+import org.datacontract.schemas._2004._07.hotel_p1_rezervacijasob.Oseba;
+
+
+/**
+ * <p>Java class for anonymous complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType>
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="stRezervacije" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="terminOd" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="terminDo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="tipSobe" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="stopnjaUdobja" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="zajtrk" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="kosilo" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="vecerja" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="wellness" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
+ *         &lt;element name="nosilec" type="{http://schemas.datacontract.org/2004/07/Hotel_P1_RezervacijaSob}Oseba" minOccurs="0"/>
+ *         &lt;element name="steviloOtrok" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="steviloOdraslih" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="stevilkaKupona" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="opomba" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "", propOrder = {
+    "stRezervacije",
+    "terminOd",
+    "terminDo",
+    "tipSobe",
+    "stopnjaUdobja",
+    "zajtrk",
+    "kosilo",
+    "vecerja",
+    "wellness",
+    "nosilec",
+    "steviloOtrok",
+    "steviloOdraslih",
+    "stevilkaKupona",
+    "opomba"
+})
+@XmlRootElement(name = "spremeniRezervacijo")
+public class SpremeniRezervacijo {
+
+    @XmlElementRef(name = "stRezervacije", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> stRezervacije;
+    @XmlElementRef(name = "terminOd", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> terminOd;
+    @XmlElementRef(name = "terminDo", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> terminDo;
+    protected Integer tipSobe;
+    @XmlElementRef(name = "stopnjaUdobja", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> stopnjaUdobja;
+    protected Boolean zajtrk;
+    protected Boolean kosilo;
+    protected Boolean vecerja;
+    protected Boolean wellness;
+    @XmlElementRef(name = "nosilec", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<Oseba> nosilec;
+    protected Integer steviloOtrok;
+    protected Integer steviloOdraslih;
+    @XmlElementRef(name = "stevilkaKupona", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> stevilkaKupona;
+    @XmlElementRef(name = "opomba", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> opomba;
+
+    /**
+     * Gets the value of the stRezervacije property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getStRezervacije() {
+        return stRezervacije;
+    }
+
+    /**
+     * Sets the value of the stRezervacije property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setStRezervacije(JAXBElement<String> value) {
+        this.stRezervacije = value;
+    }
+
+    /**
+     * Gets the value of the terminOd property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getTerminOd() {
+        return terminOd;
+    }
+
+    /**
+     * Sets the value of the terminOd property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setTerminOd(JAXBElement<String> value) {
+        this.terminOd = value;
+    }
+
+    /**
+     * Gets the value of the terminDo property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getTerminDo() {
+        return terminDo;
+    }
+
+    /**
+     * Sets the value of the terminDo property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setTerminDo(JAXBElement<String> value) {
+        this.terminDo = value;
+    }
+
+    /**
+     * Gets the value of the tipSobe property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getTipSobe() {
+        return tipSobe;
+    }
+
+    /**
+     * Sets the value of the tipSobe property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setTipSobe(Integer value) {
+        this.tipSobe = value;
+    }
+
+    /**
+     * Gets the value of the stopnjaUdobja property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getStopnjaUdobja() {
+        return stopnjaUdobja;
+    }
+
+    /**
+     * Sets the value of the stopnjaUdobja property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setStopnjaUdobja(JAXBElement<String> value) {
+        this.stopnjaUdobja = value;
+    }
+
+    /**
+     * Gets the value of the zajtrk property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isZajtrk() {
+        return zajtrk;
+    }
+
+    /**
+     * Sets the value of the zajtrk property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setZajtrk(Boolean value) {
+        this.zajtrk = value;
+    }
+
+    /**
+     * Gets the value of the kosilo property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isKosilo() {
+        return kosilo;
+    }
+
+    /**
+     * Sets the value of the kosilo property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setKosilo(Boolean value) {
+        this.kosilo = value;
+    }
+
+    /**
+     * Gets the value of the vecerja property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isVecerja() {
+        return vecerja;
+    }
+
+    /**
+     * Sets the value of the vecerja property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setVecerja(Boolean value) {
+        this.vecerja = value;
+    }
+
+    /**
+     * Gets the value of the wellness property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isWellness() {
+        return wellness;
+    }
+
+    /**
+     * Sets the value of the wellness property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setWellness(Boolean value) {
+        this.wellness = value;
+    }
+
+    /**
+     * Gets the value of the nosilec property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link Oseba }{@code >}
+     *     
+     */
+    public JAXBElement<Oseba> getNosilec() {
+        return nosilec;
+    }
+
+    /**
+     * Sets the value of the nosilec property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link Oseba }{@code >}
+     *     
+     */
+    public void setNosilec(JAXBElement<Oseba> value) {
+        this.nosilec = value;
+    }
+
+    /**
+     * Gets the value of the steviloOtrok property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getSteviloOtrok() {
+        return steviloOtrok;
+    }
+
+    /**
+     * Sets the value of the steviloOtrok property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setSteviloOtrok(Integer value) {
+        this.steviloOtrok = value;
+    }
+
+    /**
+     * Gets the value of the steviloOdraslih property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getSteviloOdraslih() {
+        return steviloOdraslih;
+    }
+
+    /**
+     * Sets the value of the steviloOdraslih property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setSteviloOdraslih(Integer value) {
+        this.steviloOdraslih = value;
+    }
+
+    /**
+     * Gets the value of the stevilkaKupona property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getStevilkaKupona() {
+        return stevilkaKupona;
+    }
+
+    /**
+     * Sets the value of the stevilkaKupona property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setStevilkaKupona(JAXBElement<String> value) {
+        this.stevilkaKupona = value;
+    }
+
+    /**
+     * Gets the value of the opomba property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public JAXBElement<String> getOpomba() {
+        return opomba;
+    }
+
+    /**
+     * Sets the value of the opomba property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
+     *     
+     */
+    public void setOpomba(JAXBElement<String> value) {
+        this.opomba = value;
+    }
+
+}

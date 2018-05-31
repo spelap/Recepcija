@@ -1,0 +1,190 @@
+
+package si.hotelskapralnica.ws.hotelskapralnica.pranje;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java class for Pranje complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="Pranje">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="emso" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="idGost" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="idPralniStroj" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="idPranja" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="konecPranja" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="opravljeno" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="zacetekPranja" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Pranje", propOrder = {
+    "emso",
+    "idGost",
+    "idPralniStroj",
+    "idPranja",
+    "konecPranja",
+    "opravljeno",
+    "zacetekPranja"
+})
+public class Pranje {
+
+    protected String emso;
+    protected int idGost;
+    protected int idPralniStroj;
+    protected int idPranja;
+    protected String konecPranja;
+    protected int opravljeno;
+    protected String zacetekPranja;
+
+    /**
+     * Gets the value of the emso property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getEmso() {
+        return emso;
+    }
+
+    /**
+     * Sets the value of the emso property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setEmso(String value) {
+        this.emso = value;
+    }
+
+    /**
+     * Gets the value of the idGost property.
+     * 
+     */
+    public int getIdGost() {
+        return idGost;
+    }
+
+    /**
+     * Sets the value of the idGost property.
+     * 
+     */
+    public void setIdGost(int value) {
+        this.idGost = value;
+    }
+
+    /**
+     * Gets the value of the idPralniStroj property.
+     * 
+     */
+    public int getIdPralniStroj() {
+        return idPralniStroj;
+    }
+
+    /**
+     * Sets the value of the idPralniStroj property.
+     * 
+     */
+    public void setIdPralniStroj(int value) {
+        this.idPralniStroj = value;
+    }
+
+    /**
+     * Gets the value of the idPranja property.
+     * 
+     */
+    public int getIdPranja() {
+        return idPranja;
+    }
+
+    /**
+     * Sets the value of the idPranja property.
+     * 
+     */
+    public void setIdPranja(int value) {
+        this.idPranja = value;
+    }
+
+    /**
+     * Gets the value of the konecPranja property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getKonecPranja() {
+        return konecPranja;
+    }
+
+    /**
+     * Sets the value of the konecPranja property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setKonecPranja(String value) {
+        this.konecPranja = value;
+    }
+
+    /**
+     * Gets the value of the opravljeno property.
+     * 
+     */
+    public int getOpravljeno() {
+        return opravljeno;
+    }
+
+    /**
+     * Sets the value of the opravljeno property.
+     * 
+     */
+    public void setOpravljeno(int value) {
+        this.opravljeno = value;
+    }
+
+    /**
+     * Gets the value of the zacetekPranja property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getZacetekPranja() {
+        return zacetekPranja;
+    }
+
+    /**
+     * Sets the value of the zacetekPranja property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setZacetekPranja(String value) {
+        this.zacetekPranja = value;
+    }
+
+}

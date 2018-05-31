@@ -1,0 +1,18 @@
+/**
+ * HotelskaPralnicaI.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
+
+package si.hotelskapralnica.ws;
+
+public interface HotelskaPralnicaI extends java.rmi.Remote {
+    public java.util.Calendar narociCiscenje(java.lang.String[] arg0, int arg1, java.util.Calendar arg2) throws java.rmi.RemoteException;
+    public void prekiniStoritev(int arg0) throws java.rmi.RemoteException;
+    public si.hotelskapralnica.ws.DelovniCas.DelovniCas[] delovniCas() throws java.rmi.RemoteException;
+    public java.util.Calendar narociLikanje(int arg0) throws java.rmi.RemoteException;
+    public void nakupOblacila(int arg0, si.hotelskapralnica.ws.Oblacilo.Oblacilo arg1, si.hotelskapralnica.ws.ProdajalnaOblacil.ProdajalnaOblacil arg2) throws java.rmi.RemoteException;
+    public java.util.Calendar pralnicaProsta(java.lang.String[] arg0) throws java.rmi.RemoteException;
+    public double cenaStoritve(java.lang.String[] arg0) throws java.rmi.RemoteException;
+}

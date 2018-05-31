@@ -1,0 +1,44 @@
+package data;
+import java.util.Date;
+
+public class Gost extends Oseba {
+
+	private Soba soba;
+	private int rezevacijska_st;
+	private Date dan_prihoda; 
+	private Date dan_odhoda;
+	private Racun racun;
+	
+	public Soba getSt_sobe() {
+		return soba;
+	}
+	public void setSt_sobe(Soba soba) {
+		this.soba = soba;
+	}
+	public int getRezevacijska_st() {
+		return rezevacijska_st;
+	}
+	public void setRezevacijska_st(int rezevacijska_st) {
+		this.rezevacijska_st = rezevacijska_st;
+	}
+	public Date getDan_prihoda() {
+		return dan_prihoda;
+	}
+	public void setDan_prihoda(Date dan_prihoda) {
+		this.dan_prihoda = dan_prihoda;
+	}
+	public Date getDan_odhoda() {
+		return dan_odhoda;
+	}
+	public void setDan_odhoda(Date dan_odhoda) {
+		this.dan_odhoda = dan_odhoda;
+	}
+	public Racun getRacun() {
+		return racun;
+	}
+	public void setRacun(Racun racun) {
+		this.racun = racun;
+	}
+	
+	
+}

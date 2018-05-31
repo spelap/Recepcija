@@ -1,0 +1,58 @@
+package service.clientsample;
+
+import service.*;
+
+public class ClientSample {
+
+	public static void main(String[] args) {
+	        System.out.println("***********************");
+	        System.out.println("Create Web Service Client...");
+	        RecepcijaService service1 = new RecepcijaService();
+	        System.out.println("Create Web Service...");
+	        RecepcijaWS port1 = service1.getRecepcijaPort();
+	        System.out.println("Call Web Service Operation...");
+	        System.out.println("Server said: " + port1.vrniNapako());
+	        System.out.println("Server said: " + port1.preveriRazpolozljivostSobe(Integer.parseInt(args[0])));
+	        System.out.println("Server said: " + port1.sporociSteviloProstihSob());
+	        System.out.println("Server said: " + port1.dodeliSobo(null,Integer.parseInt(args[1])));
+	        //Please input the parameters instead of 'null' for the upper method!
+	
+	        System.out.println("Server said: " + port1.preveriPaket(null));
+	        //Please input the parameters instead of 'null' for the upper method!
+	
+	        System.out.println("Server said: " + port1.aliJeGost(null));
+	        //Please input the parameters instead of 'null' for the upper method!
+	
+	        System.out.println("Server said: " + port1.sporociOpravljenoNarocilo(Integer.parseInt(args[2])));
+	        System.out.println("Server said: " + port1.odjaviSobo(Integer.parseInt(args[3])));
+	        System.out.println("Server said: " + port1.dodajNaRacun(null,null,null,null,null));
+	        //Please input the parameters instead of 'null' for the upper method!
+	
+	        System.out.println("Server said: " + port1.vrniVseSobe());
+	        System.out.println("Server said: " + port1.vrniVseGoste());
+	        System.out.println("Create Web Service...");
+	        RecepcijaWS port2 = service1.getRecepcijaPort();
+	        System.out.println("Call Web Service Operation...");
+	        System.out.println("Server said: " + port2.vrniNapako());
+	        System.out.println("Server said: " + port2.preveriRazpolozljivostSobe(Integer.parseInt(args[4])));
+	        System.out.println("Server said: " + port2.sporociSteviloProstihSob());
+	        System.out.println("Server said: " + port2.dodeliSobo(null,Integer.parseInt(args[5])));
+	        //Please input the parameters instead of 'null' for the upper method!
+	
+	        System.out.println("Server said: " + port2.preveriPaket(null));
+	        //Please input the parameters instead of 'null' for the upper method!
+	
+	        System.out.println("Server said: " + port2.aliJeGost(null));
+	        //Please input the parameters instead of 'null' for the upper method!
+	
+	        System.out.println("Server said: " + port2.sporociOpravljenoNarocilo(Integer.parseInt(args[6])));
+	        System.out.println("Server said: " + port2.odjaviSobo(Integer.parseInt(args[7])));
+	        System.out.println("Server said: " + port2.dodajNaRacun(null,null,null,null,null));
+	        //Please input the parameters instead of 'null' for the upper method!
+	
+	        System.out.println("Server said: " + port2.vrniVseSobe());
+	        System.out.println("Server said: " + port2.vrniVseGoste());
+	        System.out.println("***********************");
+	        System.out.println("Call Over!");
+	}
+}

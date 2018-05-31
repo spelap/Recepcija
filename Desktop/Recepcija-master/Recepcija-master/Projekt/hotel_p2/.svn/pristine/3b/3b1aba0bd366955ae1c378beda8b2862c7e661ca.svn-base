@@ -1,0 +1,150 @@
+
+package org.tempuriCistilnica;
+
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlElementDecl;
+import javax.xml.bind.annotation.XmlRegistry;
+import javax.xml.namespace.QName;
+import org.datacontract.schemas._2004._07.cistilniservis.Narocilo;
+
+
+/**
+ * This object contains factory methods for each 
+ * Java content interface and Java element interface 
+ * generated in the org.tempuri package. 
+ * <p>An ObjectFactory allows you to programatically 
+ * construct new instances of the Java representation 
+ * for XML content. The Java representation of XML 
+ * content can consist of schema derived interfaces 
+ * and classes representing the binding of schema 
+ * type definitions, element declarations and model 
+ * groups.  Factory methods for each of these are 
+ * provided in this class.
+ * 
+ */
+@XmlRegistry
+public class ObjectFactory {
+
+    private final static QName _PrekliciCiscenjeResponsePrekliciCiscenjeResult_QNAME = new QName("http://tempuri.org/", "PrekliciCiscenjeResult");
+    private final static QName _NarociCiscenjeOpis_QNAME = new QName("http://tempuri.org/", "opis");
+    private final static QName _PotrdiOpravljenoNarociloResponsePotrdiOpravljenoNarociloResult_QNAME = new QName("http://tempuri.org/", "PotrdiOpravljenoNarociloResult");
+    private final static QName _PrestaviCiscenjeResponsePrestaviCiscenjeResult_QNAME = new QName("http://tempuri.org/", "PrestaviCiscenjeResult");
+    private final static QName _NarociCiscenjeResponseNarociCiscenjeResult_QNAME = new QName("http://tempuri.org/", "NarociCiscenjeResult");
+
+    /**
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.tempuri
+     * 
+     */
+    public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link PotrdiOpravljenoNarocilo }
+     * 
+     */
+    public PotrdiOpravljenoNarocilo createPotrdiOpravljenoNarocilo() {
+        return new PotrdiOpravljenoNarocilo();
+    }
+
+    /**
+     * Create an instance of {@link NarociCiscenje }
+     * 
+     */
+    public NarociCiscenje createNarociCiscenje() {
+        return new NarociCiscenje();
+    }
+
+    /**
+     * Create an instance of {@link PrestaviCiscenjeResponse }
+     * 
+     */
+    public PrestaviCiscenjeResponse createPrestaviCiscenjeResponse() {
+        return new PrestaviCiscenjeResponse();
+    }
+
+    /**
+     * Create an instance of {@link PrekliciCiscenje }
+     * 
+     */
+    public PrekliciCiscenje createPrekliciCiscenje() {
+        return new PrekliciCiscenje();
+    }
+
+    /**
+     * Create an instance of {@link PrekliciCiscenjeResponse }
+     * 
+     */
+    public PrekliciCiscenjeResponse createPrekliciCiscenjeResponse() {
+        return new PrekliciCiscenjeResponse();
+    }
+
+    /**
+     * Create an instance of {@link PotrdiOpravljenoNarociloResponse }
+     * 
+     */
+    public PotrdiOpravljenoNarociloResponse createPotrdiOpravljenoNarociloResponse() {
+        return new PotrdiOpravljenoNarociloResponse();
+    }
+
+    /**
+     * Create an instance of {@link NarociCiscenjeResponse }
+     * 
+     */
+    public NarociCiscenjeResponse createNarociCiscenjeResponse() {
+        return new NarociCiscenjeResponse();
+    }
+
+    /**
+     * Create an instance of {@link PrestaviCiscenje }
+     * 
+     */
+    public PrestaviCiscenje createPrestaviCiscenje() {
+        return new PrestaviCiscenje();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Narocilo }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "PrekliciCiscenjeResult", scope = PrekliciCiscenjeResponse.class)
+    public JAXBElement<Narocilo> createPrekliciCiscenjeResponsePrekliciCiscenjeResult(Narocilo value) {
+        return new JAXBElement<Narocilo>(_PrekliciCiscenjeResponsePrekliciCiscenjeResult_QNAME, Narocilo.class, PrekliciCiscenjeResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "opis", scope = NarociCiscenje.class)
+    public JAXBElement<String> createNarociCiscenjeOpis(String value) {
+        return new JAXBElement<String>(_NarociCiscenjeOpis_QNAME, String.class, NarociCiscenje.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Narocilo }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "PotrdiOpravljenoNarociloResult", scope = PotrdiOpravljenoNarociloResponse.class)
+    public JAXBElement<Narocilo> createPotrdiOpravljenoNarociloResponsePotrdiOpravljenoNarociloResult(Narocilo value) {
+        return new JAXBElement<Narocilo>(_PotrdiOpravljenoNarociloResponsePotrdiOpravljenoNarociloResult_QNAME, Narocilo.class, PotrdiOpravljenoNarociloResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Narocilo }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "PrestaviCiscenjeResult", scope = PrestaviCiscenjeResponse.class)
+    public JAXBElement<Narocilo> createPrestaviCiscenjeResponsePrestaviCiscenjeResult(Narocilo value) {
+        return new JAXBElement<Narocilo>(_PrestaviCiscenjeResponsePrestaviCiscenjeResult_QNAME, Narocilo.class, PrestaviCiscenjeResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Narocilo }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "NarociCiscenjeResult", scope = NarociCiscenjeResponse.class)
+    public JAXBElement<Narocilo> createNarociCiscenjeResponseNarociCiscenjeResult(Narocilo value) {
+        return new JAXBElement<Narocilo>(_NarociCiscenjeResponseNarociCiscenjeResult_QNAME, Narocilo.class, NarociCiscenjeResponse.class, value);
+    }
+
+}

@@ -1,0 +1,125 @@
+
+package si.hotelskapralnica.ws.hotelskapralnica.likanje;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java class for Likanje complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="Likanje">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="idGost" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="idLikanja" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="konecLikanja" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="prevzemOblacil" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Likanje", propOrder = {
+    "idGost",
+    "idLikanja",
+    "konecLikanja",
+    "prevzemOblacil"
+})
+public class Likanje {
+
+    protected int idGost;
+    protected int idLikanja;
+    protected String konecLikanja;
+    protected String prevzemOblacil;
+
+    /**
+     * Gets the value of the idGost property.
+     * 
+     */
+    public int getIdGost() {
+        return idGost;
+    }
+
+    /**
+     * Sets the value of the idGost property.
+     * 
+     */
+    public void setIdGost(int value) {
+        this.idGost = value;
+    }
+
+    /**
+     * Gets the value of the idLikanja property.
+     * 
+     */
+    public int getIdLikanja() {
+        return idLikanja;
+    }
+
+    /**
+     * Sets the value of the idLikanja property.
+     * 
+     */
+    public void setIdLikanja(int value) {
+        this.idLikanja = value;
+    }
+
+    /**
+     * Gets the value of the konecLikanja property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getKonecLikanja() {
+        return konecLikanja;
+    }
+
+    /**
+     * Sets the value of the konecLikanja property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setKonecLikanja(String value) {
+        this.konecLikanja = value;
+    }
+
+    /**
+     * Gets the value of the prevzemOblacil property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getPrevzemOblacil() {
+        return prevzemOblacil;
+    }
+
+    /**
+     * Sets the value of the prevzemOblacil property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPrevzemOblacil(String value) {
+        this.prevzemOblacil = value;
+    }
+
+}

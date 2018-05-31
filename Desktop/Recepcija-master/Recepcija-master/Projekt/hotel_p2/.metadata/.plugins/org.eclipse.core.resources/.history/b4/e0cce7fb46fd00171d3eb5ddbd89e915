@@ -1,0 +1,6 @@
+package service.clientsample;
+
+import service.*;
+
+public class ClientSample {
+}

@@ -1,0 +1,165 @@
+
+package service;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java class for gost complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="gost">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://service/}oseba">
+ *       &lt;sequence>
+ *         &lt;element name="racun" type="{http://service/}racun" minOccurs="0"/>
+ *         &lt;element name="rezevacijska_st" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="soba" type="{http://service/}soba" minOccurs="0"/>
+ *         &lt;element name="st_sobe" type="{http://service/}soba" minOccurs="0"/>
+ *         &lt;element name="trenutnoGost" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *       &lt;/sequence>
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "gost", propOrder = {
+    "racun",
+    "rezevacijskaSt",
+    "soba",
+    "stSobe",
+    "trenutnoGost"
+})
+public class Gost
+    extends Oseba
+{
+
+    protected Racun racun;
+    @XmlElement(name = "rezevacijska_st")
+    protected String rezevacijskaSt;
+    protected Soba soba;
+    @XmlElement(name = "st_sobe")
+    protected Soba stSobe;
+    protected boolean trenutnoGost;
+
+    /**
+     * Gets the value of the racun property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Racun }
+     *     
+     */
+    public Racun getRacun() {
+        return racun;
+    }
+
+    /**
+     * Sets the value of the racun property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Racun }
+     *     
+     */
+    public void setRacun(Racun value) {
+        this.racun = value;
+    }
+
+    /**
+     * Gets the value of the rezevacijskaSt property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getRezevacijskaSt() {
+        return rezevacijskaSt;
+    }
+
+    /**
+     * Sets the value of the rezevacijskaSt property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setRezevacijskaSt(String value) {
+        this.rezevacijskaSt = value;
+    }
+
+    /**
+     * Gets the value of the soba property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Soba }
+     *     
+     */
+    public Soba getSoba() {
+        return soba;
+    }
+
+    /**
+     * Sets the value of the soba property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Soba }
+     *     
+     */
+    public void setSoba(Soba value) {
+        this.soba = value;
+    }
+
+    /**
+     * Gets the value of the stSobe property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Soba }
+     *     
+     */
+    public Soba getStSobe() {
+        return stSobe;
+    }
+
+    /**
+     * Sets the value of the stSobe property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Soba }
+     *     
+     */
+    public void setStSobe(Soba value) {
+        this.stSobe = value;
+    }
+
+    /**
+     * Gets the value of the trenutnoGost property.
+     * 
+     */
+    public boolean isTrenutnoGost() {
+        return trenutnoGost;
+    }
+
+    /**
+     * Sets the value of the trenutnoGost property.
+     * 
+     */
+    public void setTrenutnoGost(boolean value) {
+        this.trenutnoGost = value;
+    }
+
+}

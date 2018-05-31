@@ -1,0 +1,41 @@
+package zagonski;
+
+import org.tempuriPrevozi.IStoritvePrevozovService;
+import org.tempuriPrevozi.StoritvePrevozovServiceLocator;
+import org.tempuriWellness.Service1Locator;
+
+import service.Recepcija;
+import si.hotelskapralnica.ws.HotelskaPralnicaServiceLocator;
+import si.hotelskapralnica.ws.HotelskaPralnicaWSW;
+import si.soa.service.AnimacijskiDogodek;
+import si.soa.service.AnimacijskiDogodekServiceLocator;
+
+public class Scenarij1 {
+	static Service1Locator w;
+	static org.tempuriCistilnica.Service1Locator c;
+	
+	public static void main(String [] args){
+		try {
+			Recepcija r=new Recepcija();
+			HotelskaPralnicaServiceLocator hp=new HotelskaPralnicaServiceLocator();
+			HotelskaPralnicaWSW hotelska_pralnica=hp.getHotelskaPralnicaPort();
+			StoritvePrevozovServiceLocator prevozi=new StoritvePrevozovServiceLocator();
+			IStoritvePrevozovService pre= prevozi.getBasicHttpBinding_IStoritvePrevozovService();
+			AnimacijskiDogodekServiceLocator a=new AnimacijskiDogodekServiceLocator();
+			AnimacijskiDogodek ad=a.getAnimacijskiDogodekPort();
+			w=new Service1Locator();
+			org.tempuriWellness.IService1 wellness=w.getBasicHttpBinding_IService1();
+			c=new org.tempuriCistilnica.Service1Locator();
+			org.tempuriCistilnica.IService1 cistilnica=c.getBasicHttpBinding_IService1();
+			
+			System.out.println("Dobrodošli na recepciji Hotela!");
+			System.out.println("--------------------------------------------------------------------------------------------------------");
+			System.out.println("G: Želel bi se prijaviti");
+			System.out.println("Imate že v naprej ustvarjeno rezervacijo?");
+			
+			
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+		}
+	}
+}

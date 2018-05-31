@@ -1,0 +1,186 @@
+
+package service;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Java class for oseba complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="oseba">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="datum_rojstva" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="davcna_st" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="emso" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="ime" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="priimek" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="starost" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "oseba", propOrder = {
+    "datumRojstva",
+    "davcnaSt",
+    "emso",
+    "ime",
+    "priimek",
+    "starost"
+})
+@XmlSeeAlso({
+    Gost.class
+})
+public class Oseba {
+
+    @XmlElement(name = "datum_rojstva")
+    protected String datumRojstva;
+    @XmlElement(name = "davcna_st")
+    protected int davcnaSt;
+    protected String emso;
+    protected String ime;
+    protected String priimek;
+    protected int starost;
+
+    /**
+     * Gets the value of the datumRojstva property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDatumRojstva() {
+        return datumRojstva;
+    }
+
+    /**
+     * Sets the value of the datumRojstva property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDatumRojstva(String value) {
+        this.datumRojstva = value;
+    }
+
+    /**
+     * Gets the value of the davcnaSt property.
+     * 
+     */
+    public int getDavcnaSt() {
+        return davcnaSt;
+    }
+
+    /**
+     * Sets the value of the davcnaSt property.
+     * 
+     */
+    public void setDavcnaSt(int value) {
+        this.davcnaSt = value;
+    }
+
+    /**
+     * Gets the value of the emso property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getEmso() {
+        return emso;
+    }
+
+    /**
+     * Sets the value of the emso property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setEmso(String value) {
+        this.emso = value;
+    }
+
+    /**
+     * Gets the value of the ime property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getIme() {
+        return ime;
+    }
+
+    /**
+     * Sets the value of the ime property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setIme(String value) {
+        this.ime = value;
+    }
+
+    /**
+     * Gets the value of the priimek property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getPriimek() {
+        return priimek;
+    }
+
+    /**
+     * Sets the value of the priimek property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPriimek(String value) {
+        this.priimek = value;
+    }
+
+    /**
+     * Gets the value of the starost property.
+     * 
+     */
+    public int getStarost() {
+        return starost;
+    }
+
+    /**
+     * Sets the value of the starost property.
+     * 
+     */
+    public void setStarost(int value) {
+        this.starost = value;
+    }
+
+}

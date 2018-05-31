@@ -1,0 +1,2 @@
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://HotelskaPralnica.ws.hotelskapralnica.si/Oblacilo")
+package si.hotelskapralnica.ws.hotelskapralnica.oblacilo;

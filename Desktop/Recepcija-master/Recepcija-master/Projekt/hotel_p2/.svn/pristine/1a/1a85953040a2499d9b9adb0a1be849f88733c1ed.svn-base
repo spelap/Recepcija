@@ -1,0 +1,36 @@
+package service;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Date;
+
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+
+import data.Gost;
+import data.Oseba;
+
+@WebService(name="RecepcijaWS")
+public interface IRecepcija {
+
+	@WebMethod
+	public String dodajNaRacun(BigDecimal znesek, Gost gost, String storitev, Date datum, String sifra);
+
+	@WebMethod
+	public String dodeliSobo(ArrayList<Oseba> osebe, int rezervacijska_stevilka);
+
+	@WebMethod
+	public String odjaviSobo(int st_sobe);
+
+	@WebMethod
+	public String preveriRazpolozljivostSobe(int st_sobe, Date od, Date do_dat);
+
+	@WebMethod
+	public int sporociSteviloProstihSob();
+
+	@WebMethod
+	public boolean aliJeGost(Oseba oseba);
+
+	@WebMethod
+	public ArrayList<Gost> vrniVseGoste();
+
+}

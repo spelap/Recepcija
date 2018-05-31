@@ -1,0 +1,4 @@
+package service.clientsample;
+
+public class ClientSample {
+}

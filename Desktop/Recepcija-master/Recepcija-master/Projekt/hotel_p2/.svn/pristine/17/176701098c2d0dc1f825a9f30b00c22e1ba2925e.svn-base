@@ -1,0 +1,194 @@
+/**
+ * NarociCiscenje.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
+
+package org.tempuriCistilnica;
+
+public class NarociCiscenje  implements java.io.Serializable {
+    private java.lang.Integer idProstora;
+
+    private java.lang.String opis;
+
+    private java.util.Calendar datumCas;
+
+    public NarociCiscenje() {
+    }
+
+    public NarociCiscenje(
+           java.lang.Integer idProstora,
+           java.lang.String opis,
+           java.util.Calendar datumCas) {
+           this.idProstora = idProstora;
+           this.opis = opis;
+           this.datumCas = datumCas;
+    }
+
+
+    /**
+     * Gets the idProstora value for this NarociCiscenje.
+     * 
+     * @return idProstora
+     */
+    public java.lang.Integer getIdProstora() {
+        return idProstora;
+    }
+
+
+    /**
+     * Sets the idProstora value for this NarociCiscenje.
+     * 
+     * @param idProstora
+     */
+    public void setIdProstora(java.lang.Integer idProstora) {
+        this.idProstora = idProstora;
+    }
+
+
+    /**
+     * Gets the opis value for this NarociCiscenje.
+     * 
+     * @return opis
+     */
+    public java.lang.String getOpis() {
+        return opis;
+    }
+
+
+    /**
+     * Sets the opis value for this NarociCiscenje.
+     * 
+     * @param opis
+     */
+    public void setOpis(java.lang.String opis) {
+        this.opis = opis;
+    }
+
+
+    /**
+     * Gets the datumCas value for this NarociCiscenje.
+     * 
+     * @return datumCas
+     */
+    public java.util.Calendar getDatumCas() {
+        return datumCas;
+    }
+
+
+    /**
+     * Sets the datumCas value for this NarociCiscenje.
+     * 
+     * @param datumCas
+     */
+    public void setDatumCas(java.util.Calendar datumCas) {
+        this.datumCas = datumCas;
+    }
+
+    private java.lang.Object __equalsCalc = null;
+    public synchronized boolean equals(java.lang.Object obj) {
+        if (!(obj instanceof NarociCiscenje)) return false;
+        NarociCiscenje other = (NarociCiscenje) obj;
+        if (obj == null) return false;
+        if (this == obj) return true;
+        if (__equalsCalc != null) {
+            return (__equalsCalc == obj);
+        }
+        __equalsCalc = obj;
+        boolean _equals;
+        _equals = true && 
+            ((this.idProstora==null && other.getIdProstora()==null) || 
+             (this.idProstora!=null &&
+              this.idProstora.equals(other.getIdProstora()))) &&
+            ((this.opis==null && other.getOpis()==null) || 
+             (this.opis!=null &&
+              this.opis.equals(other.getOpis()))) &&
+            ((this.datumCas==null && other.getDatumCas()==null) || 
+             (this.datumCas!=null &&
+              this.datumCas.equals(other.getDatumCas())));
+        __equalsCalc = null;
+        return _equals;
+    }
+
+    private boolean __hashCodeCalc = false;
+    public synchronized int hashCode() {
+        if (__hashCodeCalc) {
+            return 0;
+        }
+        __hashCodeCalc = true;
+        int _hashCode = 1;
+        if (getIdProstora() != null) {
+            _hashCode += getIdProstora().hashCode();
+        }
+        if (getOpis() != null) {
+            _hashCode += getOpis().hashCode();
+        }
+        if (getDatumCas() != null) {
+            _hashCode += getDatumCas().hashCode();
+        }
+        __hashCodeCalc = false;
+        return _hashCode;
+    }
+
+    // Type metadata
+    private static org.apache.axis.description.TypeDesc typeDesc =
+        new org.apache.axis.description.TypeDesc(NarociCiscenje.class, true);
+
+    static {
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://tempuri.org/", ">NarociCiscenje"));
+        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("idProstora");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://tempuri.org/", "idProstora"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("opis");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://tempuri.org/", "opis"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(true);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("datumCas");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://tempuri.org/", "datumCas"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+    }
+
+    /**
+     * Return type metadata object
+     */
+    public static org.apache.axis.description.TypeDesc getTypeDesc() {
+        return typeDesc;
+    }
+
+    /**
+     * Get Custom Serializer
+     */
+    public static org.apache.axis.encoding.Serializer getSerializer(
+           java.lang.String mechType, 
+           java.lang.Class _javaType,  
+           javax.xml.namespace.QName _xmlType) {
+        return 
+          new  org.apache.axis.encoding.ser.BeanSerializer(
+            _javaType, _xmlType, typeDesc);
+    }
+
+    /**
+     * Get Custom Deserializer
+     */
+    public static org.apache.axis.encoding.Deserializer getDeserializer(
+           java.lang.String mechType, 
+           java.lang.Class _javaType,  
+           javax.xml.namespace.QName _xmlType) {
+        return 
+          new  org.apache.axis.encoding.ser.BeanDeserializer(
+            _javaType, _xmlType, typeDesc);
+    }
+
+}
